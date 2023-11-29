@@ -1,0 +1,226 @@
+# 23 Final Project: MERN Stack Single-Page Application
+
+
+OPERATIONAL CONCEPT for PawfectMatch Project
+
+Operational Concept summary.
+
+PawfectMatch is a simulated rescue pet adoption service catering primarily to dogs and cats.
+It is simulated as it would be unlawful for us to operate an actual service without the proper licenses and certificates. Our concept is to use to seed the pet database using the api:  	https://rescuegroups.org/services/adoptable-pet-data-api/
+Once the database is seeded, our demonstration will have a project team member login and demonstrate the  following process flow:
+
+	1. User Logins and authenticates.
+	2. User searchs (queries) the portal for a specific set of criteria for a rescue pet to adoption.
+	3. This results in a MongoDB query and returns pets which match the search criteria.
+	4. The user clicks on those pets which are of interest and optionally adds them to a favorites list.
+	5. User then selects a pet to adopt and submits the selection.
+	6. User is then presented with an adoption form.
+	7. User fills out form and submits. 
+	8. User receives approval response from the service andthe  logistics to receive the adopted pet. 
+	9. User is presented with an option to donate.
+	10. User fills out donation form and uses <STRIPE> to donate.
+	11. User receives a thank you response.
+
+Narrative: PawfectMatch End-to-End Application
+Introduction:
+PawfectMatch is a simulated rescue pet adoption service that brings together potential pet adopters and adorable rescue pets. The application utilizes a MERN stack, combining MongoDB, Express.js, React, and Node.js, to create a seamless and interactive user experience.
+
+1. Server-Side Operations:
+
+Node.js and Express.js:
+
+The server-side component is built using Node.js and Express.js, providing a robust backend infrastructure.
+Express.js handles routing, HTTP requests, and middleware functionalities.
+MongoDB Database:
+
+The application relies on a MongoDB database to store and manage pet data.
+MongoDB, a NoSQL database, allows flexible and scalable storage of pet information, including details such as name, breed, and adoption status.
+Pet Data API Integration:
+
+The server integrates with the RescueGroups API to seed the pet database with up-to-date information.
+The API provides adoptable pet data, including images, descriptions, and adoption status.
+Authentication with JWT:
+
+To secure user interactions and ensure data integrity, the server implements JSON Web Token (JWT) authentication.
+Users must log in and authenticate to access specific features like saving favorite pets or submitting adoption requests.
+
+2. Client-Side Operations:
+
+React Frontend:
+
+The frontend of PawfectMatch is developed using React, providing a dynamic and responsive user interface.
+React components are designed to seamlessly display pet information and enable user interactions.
+User Authentication:
+
+The application incorporates user authentication through JWT tokens.
+Users log in to access personalized features, including saving favorite pets and submitting adoption requests.
+Pet Search and Filtering:
+
+The React frontend allows users to search for pets based on specific criteria such as species, breed, or age.
+The search triggers MongoDB queries on the server, which dynamically retrieves and displays relevant pet data.
+Favorite Pets List:
+
+Users can add pets to their favorites list for easy reference.
+The frontend communicates with the server to update the user's favorites, leveraging RESTful API endpoints.
+Adoption Process:
+
+When a user decides to adopt a pet, the frontend initiates the adoption process.
+A series of forms collect necessary information, and upon submission, the frontend communicates with the server to process the adoption request.
+Donation Integration with Stripe:
+
+PawfectMatch provides users with the option to make donations to support the rescue service.
+The frontend integrates with the Stripe payment platform to securely process and record user donations.
+
+3. End-to-End Flow:
+
+User Interaction:
+
+A user logs into the PawfectMatch application, gaining access to personalized features.
+Pet Search:
+
+The user uses the search functionality to find pets based on specific criteria.
+Favorite Pets:
+
+The user can add pets to their favorites list for future reference.
+Adoption Process:
+
+Upon selecting a pet for adoption, the user initiates the adoption process, filling out necessary forms.
+Server Interaction:
+
+The frontend communicates with the server to handle adoption requests, updating the pet's status in the database.
+Donation Option:
+
+After a successful adoption, the user is presented with an option to make a donation.
+Stripe Integration:
+
+The frontend integrates with the Stripe platform for secure and seamless donation processing.
+Confirmation and Thank You:
+
+The user receives confirmation of the adoption and, if applicable, a thank-you message for their donation.
+
+Conclusion:
+The PawfectMatch end-to-end application demonstrates a harmonious collaboration between the client and server components. By leveraging the power of the MERN stack, the application provides users with an engaging and efficient platform for exploring, adopting, and supporting rescue pets.
+
+
+
+
+ 
+
+
+ARCHITECTURE
+/project-root
+│
+├── client
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   │   ├── common
+│   │   │   │   ├── Header.js
+│   │   │   │   ├── Footer.js
+│   │   │   │   └── ...
+│   │   │   ├── auth
+│   │   │   │   ├── Login.js
+│   │   │   │   ├── Register.js
+│   │   │   │   └── ...
+│   │   │   ├── pets
+│   │   │   │   ├── PetList.js
+│   │   │   │   ├── PetDetail.js
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── services
+│   │   │   ├── api.js
+│   │   │   └── auth.js
+│   │   ├── styles
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── ...
+│   └── package.json
+│
+├── server
+│   ├── config
+│   │   ├── db.js
+│   │   ├── jwt.js
+│   │   └── ...
+│   ├── controllers
+│   │   ├── authController.js
+│   │   ├── petController.js
+│   │   └── ...
+│   ├── middleware
+│   │   ├── authMiddleware.js
+│   │   └── ...
+│   ├── models
+│   │   ├── User.js
+│   │   ├── Pet.js
+│   │   └── ...
+│   ├── routes
+│   │   ├── authRoutes.js
+│   │   ├── petRoutes.js
+│   │   └── ...
+│   ├── server.js
+│   └── package.json
+│
+├── node_modules
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+
+
+
+General Information
+
+This is the operational concept for our Full Stack Web Development bootcamp course final project which is due 14 Dec, 2023.  This project represents the demonstration of what we have learned during the course relative to devloping, building, testing and deploying a high quality full stack application based on the MERN stack.
+
+This project is a fantastic opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Remember that employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+
+## Project Requirements
+
+Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. This project will provide you with the best opportunity to demonstrate your problem-solving skills, which employers will want to see during interviews. Once again, the user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
+
+* Use React for the front end.
+* Use restful api 
+* Use MongoDB and the Mongoose ODM for the database.
+* Be deployed using a service such as Heroku, Render or Netlify.
+* Have a polished UI.
+* Be responsive.
+* Be interactive (i.e., accept and respond to user input).
+* Include authentication (JWT).
+* Protect sensitive API key information on the server.
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+* Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+### CSS Styling
+
+Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
+
+* Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include [styled-components](https://styled-components.com/) and [Emotion](https://emotion.sh/docs/introduction).
+
+* Try using a component library, such as [Semantic UI](https://semantic-ui.com/), [Chakra UI](https://chakra-ui.com/), or [Ant Design](https://ant.design/).
+
+* Create all the CSS for your application just using CSS.
+
+Ultimately, it doesn't matter which of these options you choose&mdash;it just needs to look professional and be mobile-friendly.
+
+### Payment Platform
+
+Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
+
+
+## Presentation Requirements
+
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
+
+* Elevator pitch: a one minute description of your application
+
+* Concept: What is your user story? What was your motivation for development?
+
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+
+* Demo: Show your stuff!
+
+* Directions for Future Development
+
+* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
+

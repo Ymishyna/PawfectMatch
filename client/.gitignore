@@ -1,0 +1,4 @@
+# .gitignore (Client)
+node_modules/
+build/
+client/.env

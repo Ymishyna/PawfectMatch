@@ -1,0 +1,5 @@
+# .gitignore (Root)
+node_modules/
+.env
+build/
+zartifacts

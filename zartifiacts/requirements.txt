@@ -1,5 +1,85 @@
 # 23 Final Project: MERN Stack Single-Page Application
 
+1.  on slack put repository group member names, project repository, member git repositories and member slack ids
+2. member strengths
+	Daniel:	api  (decision: restful), authentication/tokens, branch experts
+	Sara:	front end (REACT)
+	Marcus	front end (REACT)
+	Yana	api, authentication, branch experts
+	Tom	integration, backend, database, netlify or render
+3. roles -  
+	PM		Sara
+	GITHUB Mgr	Yana
+	Deployment Mgr	Yana
+	Architecture	Tom
+	Tester		Tom
+
+4.  Cadence:   
+	Discord - M,T, Th 6:30 - 9:30, Slack checkpoints during the day.
+
+5.  Communication:  
+	Bring in TAs in - don't struggle.
+	TAs help with vetting our concept /architecture/ file structure.
+
+
+4. CICD - continuous integration continuous deployment
+
+** FOLDER STRUCTURE
+project-root/
+|-- client/
+|   |-- public/
+|   |   |-- index.html
+i    |-- iimages
+|   |
+|   |-- src/
+|       |-- assets/
+|       |-- components/
+|       |   |-- common/
+|       |   |-- auth/
+|       |   |-- other-component/
+|       |
+|       |-- services/
+|       |   |-- api.js    // API service for making RESTful API requests
+|       |
+|       |-- pages/
+|       |   |-- Home.js
+|       |   |-- About.js
+|       |   |-- Auth/
+|       |       |-- Login.js
+|       |       |-- Signup.js
+|       |
+|       |-- App.js
+|       |-- index.js
+|
+|-- server/
+|   |-- config/
+|   |   |-- config.js    // Configuration files (e.g., database connection)
+|   |
+|   |-- controllers/
+|   |   |-- authController.js    // Controller for authentication
+|   |   |-- otherController.js   // Other controllers
+|   |
+|   |-- middleware/
+|   |   |-- authMiddleware.js    // Middleware for authentication
+|   |
+|   |-- models/
+|   |   |-- User.js    // Mongoose model for User
+|   |   |-- OtherModel.js    // Other Mongoose models
+|   |
+|   |-- routes/
+|   |   |-- api/
+|   |       |-- authRoutes.js    // API routes for authentication
+|   |       |-- otherRoutes.js   // Other API routes
+|   |
+|   |-- app.js    // Express.js app setup
+|   |-- server.js    // Entry point for the server
+|
+|-- .gitignore
+|-- package.json
+|-- README.md
+----.env
+
+
 Projects have played a key role in your journey to becoming a full-stack web developer. As you apply for development jobs, your portfolio is absolutely vital to opening doors to opportunities. Your portfolio showcases high-quality deployed examples of your work, and you can use your finished projects for that very purpose.
 
 This project is a fantastic opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Remember that employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
@@ -10,13 +90,13 @@ Your group will use everything you’ve learned throughout this course to create
 
 * Use React for the front end.
 
-* Use GraphQL with a Node.js and Express.js server.
+* Use GraphQL with a Node.js and Express.js server. (optional or restful api)
 
 * Use MongoDB and the Mongoose ODM for the database.
 
-* Use queries and mutations for retrieving, adding, updating, and deleting data.
+* Use queries and mutations for retrieving, adding, updating, and deleting data. (n/a if using restful api)
 
-* Be deployed using Heroku (with data).
+* Be deployed using Heroku (with data). (or render or netlify)
 
 * Have a polished UI.
 
