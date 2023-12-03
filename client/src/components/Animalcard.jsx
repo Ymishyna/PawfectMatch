@@ -5,7 +5,7 @@ function Animal ({ animal }) {
 
     return (
         <div className='animal' key={name}>
-            <img src={path} alt={name} className='project-img' />
+            <img src={path} alt={name} className='animal-img' />
             <div className='animal-text'>
                 <h3>
                     <a href={breed}>{name}</a>{' '}
