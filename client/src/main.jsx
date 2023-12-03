@@ -6,7 +6,7 @@ import App from './App.jsx'
 // import SearchBooks from './pages/SearchBooks'
 // import SavedBooks from './pages/SavedBooks'
 // import About from './components/About.jsx'
-// import Animalcard from './components/Animalcard.jsx'
+// import Animal from './components/Animalcard.jsx'
 
 const router = createBrowserRouter([
   {
