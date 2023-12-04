@@ -1,7 +1,7 @@
-const { Schema } = require('mongoose');
-const Pet = require("./Pet");
+const { Schema, model } = require('mongoose');
+const petSchema = require("./Pet");
 
-const userSchema = new Schema ({
+const vendorSchema = new Schema ({
     username: {
         type: String,
         required: true,
@@ -17,7 +17,11 @@ const userSchema = new Schema ({
         type: String,
         required: true,
       },
-      pets: [Pet.Schema]
+      location: {
+        type: Number,
+        required: true
+      },
+      pets: [petSchema],
     },
     // set this to use virtual below
     {
@@ -26,6 +30,10 @@ const userSchema = new Schema ({
       },  
 })
 
-const User = model('User', userSchema);
+vendorSchema.virtual('petCount').get(function () {
+  return this.pets.length;
+});
 
-module.exports = User;
+const Vendor = model('Vendor', vendorSchema);
+
+module.exports = Vendor;

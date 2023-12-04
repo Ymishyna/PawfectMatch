@@ -1,4 +1,6 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
+const vendorSchema = require('./Vendor');
+const Vendor = require('./Vendor');
 
 const petSchema = new Schema ({
         name: {
@@ -35,9 +37,9 @@ const petSchema = new Schema ({
             required: true
         },
         location: {
-            type: String,
-            required: true
-        }  
+            type: Number,
+            required: true,
+        }
     },
     // set this to use virtual below
     {
