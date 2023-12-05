@@ -1,18 +1,18 @@
-//import { Card, Fade, Container, Typography } from "@mui/material";
+import { Card, Fade, Container, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-//import { useCreatePayment } from "../hooks/useCreatePayment";
-//import { Elements, } from "@stripe/react-stripe-js";
-//import { loadStripe } from "@stripe/stripe-js";
-//import DonationInput from "./DonationInput";
-//import StripeForm from "./StripeForm";
+import { CreatePayment } from "./Hooks/CreatePayment";
+import { Elements, } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { DonationInput } from "../Stripe/DonationInput";
+import { StripeForm } from "./StripeForm";
 
-//const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 export default function DonationForm() {
     const [amount, setAmount] = useState(10);
     const [payment, setPayment] = useState(null);
     const [confirmedPayment, setConfirmedPayment] = useState(null);
-    const { mutate, isLoading, data, error } = useCreatePayment();
+    const { mutate, isLoading, data, error } = CreatePayment();
 
     const handleSubmit = () => (mutate(amount));
 

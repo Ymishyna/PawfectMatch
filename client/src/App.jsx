@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
-//import { ThemeProvider} from '@mui/material/styles';
-//import theme from './themes';
-//import { QueryProvide } from './QueryProvider';
-//import DonationForm form '../components/DonationForm;
+// import { ThemeProvider } from "@mui/material/styles";
+// import { theme } from "./themes";
+// import { QueryProvide } from "./QueryProvider";
+import { DonationForm } from "./components/DonateForm";
+import { Animalcard } from "./components/Animalcard";
 
 import { About } from "./components/pages/About";
 import { Contact } from "./components/pages/Contact";
-import DonationForm from './components/DonateForm';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Animalcard />
       </div>
       <div>
         <div className="search-area">search area here</div>
@@ -28,16 +29,13 @@ function App() {
           <h2>PAWfect Match</h2>
         </div>
       </div>
+      <ThemeProvider theme={theme}>
+        <QueryProvider>
+          <DonationForm />
+        </QueryProvider>
+      </ThemeProvider>
     </>
   );
-
-  // return (
-  //   <ThemeProvider theme={theme}>
-  //     <QueryProvider>
-            <DonationForm />
-  //     </QueryProvider>
-  //   </ThemeProvider>
-  // );
 }
 
 export default App;
