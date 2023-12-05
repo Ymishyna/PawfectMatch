@@ -1,23 +1,23 @@
-import { Card, Fade, Container, Typography } from "@mui/material";
+//import { Card, Fade, Container, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useCreatePaymentIntent } from "../hooks/useCreatePaymentIntent";
-import { Elements, } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import DonationInput from "./DonationInput";
-import StripeForm from "./StripeForm";
+//import { useCreatePayment } from "../hooks/useCreatePayment";
+//import { Elements, } from "@stripe/react-stripe-js";
+//import { loadStripe } from "@stripe/stripe-js";
+//import DonationInput from "./DonationInput";
+//import StripeForm from "./StripeForm";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+//const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 export default function DonationForm() {
     const [amount, setAmount] = useState(10);
-    const [paymentIntent, setPaymentIntent] = useState(null);
+    const [payment, setPayment] = useState(null);
     const [confirmedPayment, setConfirmedPayment] = useState(null);
-    const { mutate, isLoading, data, error } = useCreatePaymentIntent();
+    const { mutate, isLoading, data, error } = useCreatePayment();
 
     const handleSubmit = () => (mutate(amount));
 
     const handleClear = () => {
-        setPaymentIntent(null);
+        setPayment(null);
     }
     const handleChange = (e) => {
         setAmount(e.target.value);
@@ -32,20 +32,20 @@ export default function DonationForm() {
     }
 
     useEffect(() => {
-        if (data) setPaymentIntent(data);
+        if (data) setPayment(data);
     }, [data]);
 
     return (
         <Card>
-            <Fade in={!paymentIntent && !confirmedPayment} unmountOnExit>
+            <Fade in={!payment && !confirmedPayment} unmountOnExit>
                 <Container>
                     <DonationInput amount={amount} handleChange={handleChange} handleSubmit={handleSubmit} isLoading={isLoading} data={data} error={error} />
                 </Container>
             </Fade>
-            <Fade in={!!paymentIntent && !confirmedPayment} unmountOnExit>
+            <Fade in={!!payment && !confirmedPayment} unmountOnExit>
                 <Container>
-                    <Elements stripe={stripePromise} options={{ clientSecret: paymentIntent?.client_secret }}>
-                        <StripeForm client_secret={paymentIntent?.client_secret} amount={paymentIntent?.amount} handleClear={handleClear} handleConfirmPayment={handleConfirmPayment} />
+                    <Elements stripe={stripePromise} options={{ clientSecret: payment?.client_secret }}>
+                        <StripeForm client_secret={payment?.client_secret} amount={payment?.amount} handleClear={handleClear} handleConfirmPayment={handleConfirmPayment} />
                     </Elements>
                 </Container>
             </Fade>
