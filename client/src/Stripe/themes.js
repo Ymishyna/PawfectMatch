@@ -1,4 +1,3 @@
-
 const theme = createTheme({
     palette: {
       primary: { main: '#bc232a', },
