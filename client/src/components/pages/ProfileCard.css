@@ -2,12 +2,12 @@
   width: 22rem;
   margin: 1rem;
   text-align: center;
-  background-color: none  ;
+  background-color: none;
 }
 
 .card h1 {
   margin: 1.25rem 0rem 1rem;
-  color: black;
+  color: white;
   font-size: 24px;
 }
 
@@ -24,13 +24,8 @@
   margin: 0rem;
   border: 0.5rem solid orange;
   border-radius: 50%;
-  width: 15rem;
+  width: 20rem;
   height: auto;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
 }
 
 .card-body a {
@@ -40,7 +35,8 @@
 }
 
 .githubLogo {
-  margin: rem;
+  filter: invert(100%);
+  margin: 0rem;
   width: auto;
   height: 50px;
   cursor: pointer;

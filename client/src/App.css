@@ -12,3 +12,15 @@
   justify-content: space-around;
   margin: 1rem;
 }
+
+.logo-area {
+  margin: 10rem;
+  float: right;
+  width: 30rem;
+  height: auto;
+}
+
+.logo-area img {
+  width: 10rem;
+  height: auto;
+}

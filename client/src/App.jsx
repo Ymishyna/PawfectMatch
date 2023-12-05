@@ -21,6 +21,13 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <div>
+        <div className="search-area">search area here</div>
+        <div className="logo-area">
+          <img src="./src/assets/Logo.png" alt="Pawfect Match Logo" />
+          <h2>PAWfect Match</h2>
+        </div>
+      </div>
     </>
   );
 

@@ -1,7 +1,6 @@
 form {
   float: left;
-  background: gainsboro;
-  color: black;
+  background: white;
   display: flex;
   flex-direction: column;
   margin: 5rem 5rem;
@@ -13,14 +12,15 @@ form {
 
 form h3 {
   text-align: center;
-  color: #424242;
+  color: orange;
+  font-size: 2.5rem;
   font-weight: 750;
   margin-bottom: 0.5rem;
 }
 
 form input,
 form textarea {
-  color: black;
+  color: orange;
   border: 0;
   margin: 0.5rem;
   padding: 1rem;
