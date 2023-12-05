@@ -4,7 +4,7 @@ import { ProfileCard } from "./ProfileCard";
 export const About = () => {
   return (
     <>
-      <div>
+      <div className="profile-cards">
         {/* Use ProfileCard with different profileIndex values to display different profiles */}
         <ProfileCard profileIndex={0} />
         <ProfileCard profileIndex={1} />

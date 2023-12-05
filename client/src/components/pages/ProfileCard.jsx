@@ -7,13 +7,21 @@ export const ProfileCard = ({ profileIndex }) => {
 
   const visitGithub = () => {
     window.open(githubLink);
-  }
+  };
 
   return (
-    <div className="card">
-      <img className="profilePic" src={imageSrc} alt={name} />
-      <h1>{name}</h1>
-        <button onClick={visitGithub}>Github</button>
-    </div>
+      <div class="card">
+        <img class="profilePic" src={imageSrc} alt={name} />
+        <div class="card-body">
+          <h1>{name}</h1>
+          <a classname="github-button" onClick={visitGithub}>
+            <img
+              src="./src/assets/GitHub-logo.png"
+              className="githubLogo"
+              alt="Github Link"
+            />
+          </a>
+        </div>
+      </div>
   );
 };

@@ -1,7 +1,7 @@
 export const profilesData = [
     {
         name: "Yana Mishyna",
-        imageSrc: "https://avatars.githubusercontent.com/u/65672764?v=4",
+        imageSrc: "https://ca.slack-edge.com/T056YAJ4MPF-U05CN22R469-8fc35068fd4f-512",
         githubLink: "https://github.com/Ymishyna",
     },
     {

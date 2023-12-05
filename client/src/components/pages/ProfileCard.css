@@ -1,14 +1,31 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 50%;
-  margin: 3rem;
+  width: 22rem;
+  margin: 1rem;
   text-align: center;
+  background-color: none  ;
+}
+
+.card h1 {
+  margin: 1.25rem 0rem 1rem;
+  color: black;
+  font-size: 24px;
+}
+
+.card-body {
+  background-color: olivedrab;
+  border-radius: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0rem;
 }
 
 .profilePic {
+  margin: 0rem;
+  border: 0.5rem solid orange;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: auto;
 }
 
 .title {
@@ -16,20 +33,19 @@
   font-size: 18px;
 }
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+.card-body a {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
+.githubLogo {
+  margin: rem;
+  width: auto;
+  height: 50px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
   background-color: orange;
 }
