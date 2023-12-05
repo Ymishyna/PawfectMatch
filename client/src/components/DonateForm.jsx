@@ -6,7 +6,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import DonationInput from "./DonationInput";
 import StripeForm from "./StripeForm";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(import.meta.env.STRIPE_PUBLIC_KEY);
 
 export default function DonationForm() {
     const [amount, setAmount] = useState(10);
