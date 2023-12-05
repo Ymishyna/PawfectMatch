@@ -1,5 +1,5 @@
 import React from "react";
-import "./profileCard.css";
+import "./ProfileCard.css";
 import { profilesData } from "./data";
 
 export const ProfileCard = ({ profileIndex }) => {
