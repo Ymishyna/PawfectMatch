@@ -3,7 +3,7 @@ import express from 'express';
 export default function createStripeRoutes(stripe) {
     const router = express.Router();
 
-    router.post('/api/create-payment-intent', async (req, res) => {
+    router.post('/api/create-payment', async (req, res) => {
         const { amount } = req.body;
         try {
             const paymentIntent = await stripe.paymentIntents.create({

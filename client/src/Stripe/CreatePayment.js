@@ -1,4 +1,3 @@
-
 import { useMutation } from 'react-query';
 import {createPayment} from '../api/createPayment';
 
