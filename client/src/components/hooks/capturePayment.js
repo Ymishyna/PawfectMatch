@@ -1,4 +1,8 @@
 // import { useMutation } from 'react-query';
+<<<<<<< HEAD
+=======
+// //import capturePayment from '../hooks/capturePayment';
+>>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64
 
 // export const useSubmitPayment = (elements, stripe, amount) => {
 //   const mutation = useMutation(() => capturePayment(elements, stripe, amount));

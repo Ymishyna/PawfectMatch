@@ -1,6 +1,10 @@
 // import { CardContent, Grid, Typography, OutlinedInput, InputAdornment, Button, CircularProgress } from "@mui/material";
 
+<<<<<<< HEAD
 // const DonationInput = ({ amount, handleChange, handleSubmit, isLoading, error }) => (
+=======
+// export const DonationInput = ({ amount, handleChange, handleSubmit, isLoading, error }) => (
+>>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64
 //     <CardContent>
 //         <Grid container spacing={2} justifyContent={"center"}>
 //             <Grid item xs={12}>
@@ -29,5 +33,9 @@
 //             </Grid>
 //         </Grid>
 //     </CardContent>);
+<<<<<<< HEAD
     
 // export default DonationInput;
+=======
+//export default DonationInput;
+>>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64
