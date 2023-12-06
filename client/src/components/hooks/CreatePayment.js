@@ -23,4 +23,4 @@ export const CreatePayment = async (amount) => {
     const data = await response.json();
     return data.payment;
   };
-  export {CreatePayment};
+  //export {CreatePayment};
