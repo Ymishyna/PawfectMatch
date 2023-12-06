@@ -4,7 +4,7 @@ import { useSubmitPayment } from "../components/hooks/capturePayment";
 import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState, useEffect } from "react";
 
-const StripeForm = ({ client_secret, amount, handleClear, handleConfirmPayment}) => {
+export const StripeForm = ({ client_secret, amount, handleClear, handleConfirmPayment}) => {
 
     const stripe = useStripe();
     const elements = useElements();
@@ -31,4 +31,4 @@ const StripeForm = ({ client_secret, amount, handleClear, handleConfirmPayment})
         </CardContent>
         )
 }
-export default StripeForm
+//export default StripeForm

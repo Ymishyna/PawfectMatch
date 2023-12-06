@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
-// import { ThemeProvider } from "@mui/material/styles";
-// import { theme } from "./themes";
-// import { QueryProvide } from "./QueryProvider";
+import { ThemeProvider } from "@mui/material/styles";
+ import { theme } from "./components/themes";
+import { QueryProvide } from "./components/QueryProvider";
 import { DonationForm } from "./components/DonateForm";
-import { Animalcard } from "./components/Animalcard";
+import { Animal } from "./components/Animalcard";
 
 import { About } from "./components/pages/About";
 import { Contact } from "./components/pages/Contact";
@@ -20,7 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Animalcard />
+        <Animal />
       </div>
       <div>
         <div className="search-area">search area here</div>
