@@ -4,7 +4,7 @@ import { CreatePayment } from "./Hooks/CreatePayment";
 import { Elements, } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { DonationInput } from "../Stripe/DonationInput";
-import { StripeForm } from "./StripeForm";
+import { StripeForm } from "../Stripe/StripeForm";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 

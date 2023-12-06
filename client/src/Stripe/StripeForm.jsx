@@ -1,6 +1,6 @@
 import { Button, CardActions, CardContent, CircularProgress, Typography } from "@mui/material";
 import { PaymentElement, } from "@stripe/react-stripe-js";
-import { useSubmitPayment } from "../hooks/useCapturePayment";
+import { useSubmitPayment } from "../components/hooks/capturePayment";
 import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState, useEffect } from "react";
 

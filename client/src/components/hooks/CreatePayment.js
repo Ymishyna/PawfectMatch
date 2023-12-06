@@ -1,13 +1,13 @@
 
 import { useMutation } from 'react-query';
-import {createPayment} from '../api/createPayment';
+import {CreatePayment} from '../hooks/CreatePayment';
 
 export const useCreatePayment = () => {
-  const mutation = useMutation(createPayment);
+  const mutation = useMutation(CreatePayment);
   return mutation;
 };
-export const createPayment = async (amount) => {
-    const response = await fetch('/api/create-payment', {
+export const CreatePayment = async (amount) => {
+    const response = await fetch('/api/Create-payment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,4 +23,4 @@ export const createPayment = async (amount) => {
     const data = await response.json();
     return data.payment;
   };
-  export {createPayment};
+  export {CreatePayment};
