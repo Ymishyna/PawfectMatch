@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Animal = ({ animal }) => {
     const { path, name, breed, bio } = animal;
-
+  
     return (
         <div className='animal' key={name}>
             <img src={path} alt={name} className='animal-img' />
@@ -16,3 +16,5 @@ export const Animal = ({ animal }) => {
     )
 }
 //export default Animal;
+
+ 
