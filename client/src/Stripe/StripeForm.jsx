@@ -4,7 +4,11 @@
 // import { useElements, useStripe } from "@stripe/react-stripe-js";
 // import { useState, useEffect } from "react";
 
+<<<<<<< HEAD
+// const StripeForm = ({ client_secret, amount, handleClear, handleConfirmPayment}) => {
+=======
 // export const StripeForm = ({ client_secret, amount, handleClear, handleConfirmPayment}) => {
+>>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64
 
 //     const stripe = useStripe();
 //     const elements = useElements();
@@ -31,4 +35,8 @@
 //         </CardContent>
 //         )
 // }
+<<<<<<< HEAD
+// export default StripeForm
+=======
 //export default StripeForm
+>>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64

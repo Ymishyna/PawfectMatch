@@ -5,22 +5,18 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .profile-cards {
+  flex: 1; /* This will make the content area grow to fill available space */
   display: flex;
   flex-flow: row wrap;
   flex-direction: row;
   justify-content: space-around;
   margin: 1rem;
-}
-
-.logo-area {
-  margin: 10rem;
-  float: right;
-  width: 30rem;
-  height: auto;
-}
-
-.logo-area img {
-  width: 10rem;
-  height: auto;
 }

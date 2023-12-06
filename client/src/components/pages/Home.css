@@ -1,0 +1,23 @@
+.logo {
+    float: right;
+    max-height: 40rem;
+    width: auto;
+}
+
+/* src/SearchBox.css */
+.search-box {
+  display: flex;
+  margin: 10px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
