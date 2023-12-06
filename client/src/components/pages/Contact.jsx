@@ -59,5 +59,6 @@ export const Contact = () => {
       ></textarea>
       <button type="submit">Submit</button>
     </form>
+    
   );
 };
