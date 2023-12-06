@@ -1,9 +1,9 @@
 form {
   float: left;
-  background: white;
+  background: olivedrab;
   display: flex;
   flex-direction: column;
-  margin: 5rem 5rem;
+  margin: 5rem 5%;
   padding: 2rem 4rem;
   width: 100%;
   max-width: 50rem;
@@ -27,27 +27,41 @@ form textarea {
   outline: none;
   background: whitesmoke;
   font-size: 16px;
+  border-radius: 0.5rem;
 }
 
 form button {
   padding: 1rem;
-  background: darkslategray;
+  background: orange;
   color: white;
   font-size: 18px;
   border: 0;
   outline: none;
   cursor: pointer;
-  width: 15rem;
-  margin: 0.5rem auto 0;
-  border-radius: 5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
 }
 
 form button:hover {
-  background: orange;
+  background: tan;
+  color: white;
 }
 
 .validation-message {
   color: red;
   font-size: 14px;
   margin: 0.5rem;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  form {
+    margin: 2rem 0%;
+    padding: 2rem;
+  }
+
+  form button {
+    width: auto;
+  }
 }

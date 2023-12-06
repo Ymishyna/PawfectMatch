@@ -1,23 +1,76 @@
-.logo {
-    float: right;
-    max-height: 40rem;
-    width: auto;
-}
-
-/* src/SearchBox.css */
-.search-box {
+.home {
   display: flex;
-  margin: 10px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 }
 
-input {
+.search-box {
+  width: 25%;
+  padding: 1.5rem;
+  background-color: olivedrab;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5rem;
+}
+
+select {
+  width: 150px;
   padding: 8px;
-  font-size: 16px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 0.9em;
 }
 
-button {
-  padding: 8px 16px;
-  margin-left: 8px;
-  font-size: 16px;
+.q1, .q2, .q3 {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  text-align: right;
+}
+
+.searchButton {
+  width: 40%;
+  height: 2.5rem;
+  align-self: center;
+  background-color: orange;
+  color: white;
+  margin: 1.5rem;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5em;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  background-color: orange;
+}
+
+.logo img {
+  margin-right: 5rem;
+  height: 22rem;
+  width: auto;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .search-box {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 1.5rem; /* Add some space between the search box and logo */
+  }
+
+  .logo img {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 1.5rem; /* Add some space below the logo */
+  }
 }
