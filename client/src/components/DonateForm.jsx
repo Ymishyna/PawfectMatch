@@ -8,7 +8,7 @@ import { StripeForm } from "../Stripe/StripeForm";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
-export default function DonationForm() {
+export  function DonateForm() {
     const [amount, setAmount] = useState(10);
     const [payment, setPayment] = useState(null);
     const [confirmedPayment, setConfirmedPayment] = useState(null);

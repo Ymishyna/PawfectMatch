@@ -1,5 +1,5 @@
 
-const theme = createTheme({
+export const theme = createTheme({
     palette: {
       primary: { main: '#bc232a', },
       secondary: { main: '#c9dde9' },
@@ -16,4 +16,4 @@ const theme = createTheme({
     }
   });
 
-  export default theme;
+  //export default theme;

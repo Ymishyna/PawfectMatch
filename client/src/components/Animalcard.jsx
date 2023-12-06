@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Animal ({ animal }) {
+export const Animal = ({ animal }) => {
     const { path, name, breed, bio } = animal;
 
     return (
@@ -15,4 +15,4 @@ function Animal ({ animal }) {
         </div>
     )
 }
-export default Animal;
+//export default Animal;

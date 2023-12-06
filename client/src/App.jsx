@@ -3,9 +3,9 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
- import { theme } from "./components/themes";
-import { QueryProvide } from "./components/QueryProvider";
-import { DonationForm } from "./components/DonateForm";
+ //import { theme } from "./components/themes";
+import { QueryProvider } from "./components/QueryProvider";
+import { DonateForm } from "./components/DonateForm";
 import { Animal } from "./components/Animalcard";
 
 import { About } from "./components/pages/About";
@@ -29,11 +29,11 @@ function App() {
           <h2>PAWfect Match</h2>
         </div>
       </div>
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}> */}
         <QueryProvider>
-          <DonationForm />
+          <DonateForm />
         </QueryProvider>
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
     </>
   );
 }
