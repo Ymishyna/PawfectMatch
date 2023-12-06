@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
+// import { Route, Routes } from "react-router-dom";
+// import { ThemeProvider } from "@mui/material/styles";
  //import { theme } from "./components/themes";
-import { QueryProvider } from "./components/QueryProvider";
-import { DonateForm } from "./components/DonateForm";
+// import { QueryProvider } from "./components/QueryProvider";
+// import { DonateForm } from "./components/DonateForm";
 import { Animal } from "./components/Animalcard";
 
 import { About } from "./components/pages/About";
@@ -30,9 +30,9 @@ function App() {
         </div>
       </div>
       {/* <ThemeProvider theme={theme}> */}
-        <QueryProvider>
-          <DonateForm />
-        </QueryProvider>
+        {/* <QueryProvider> */}
+          {/* <DonateForm /> */}
+        {/* </QueryProvider> */}
       {/* </ThemeProvider> */}
     </>
   );
