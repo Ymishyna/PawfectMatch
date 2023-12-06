@@ -1,6 +1,6 @@
 import { Card, Fade, Container, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { CreatePayment } from "./hooks/CreatePayment";
+import { CreatePayment } from "./hooks/createPayment";
 import { Elements, } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { DonationInput } from "../Stripe/DonationInput";
