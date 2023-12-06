@@ -60,4 +60,16 @@ export const Contact = () => {
       <button type="submit">Submit</button>
     </form>
   );
+  return (
+    <div className="container">
+      <div className="card">
+      
+      <img
+      className="card"
+      src={"https://buy.stripe.com/test_bIY00k20Ve0e1AQbII"}
+      alt="card donation"
+        />
+      </div>
+    </div>
+  );
 };
