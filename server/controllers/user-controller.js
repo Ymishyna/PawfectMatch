@@ -42,31 +42,31 @@ module.exports = {
     const token = signToken(user);
     res.json({ token, user });
   },
-}
-//   async saveBook({ user, body }, res) {
-//     console.log(user);
-//     try {
-//       const updatedUser = await User.findOneAndUpdate(
-//         { _id: user._id },
-//         { $addToSet: { savedBooks: body } },
-//         { new: true, runValidators: true }
-//       );
-//       return res.json(updatedUser);
-//     } catch (err) {
-//       console.log(err);
-//       return res.status(400).json(err);
-//     }
-//   },
-//   // remove a book from `savedBooks`
-//   async deleteBook({ user, params }, res) {
-//     const updatedUser = await User.findOneAndUpdate(
-//       { _id: user._id },
-//       { $pull: { savedBooks: { bookId: params.bookId } } },
-//       { new: true }
-//     );
-//     if (!updatedUser) {
-//       return res.status(404).json({ message: "Couldn't find user with this id!" });
-//     }
-//     return res.json(updatedUser);
-//   },
-// };
+
+  async newPet({ vendor, body }, res) {
+    console.log(vendor);
+    try {
+      const updatedVendor = await Vendor.findOneAndUpdate(
+        { _id: vendor._id },
+        { $addToSet: { pets: body } },
+        { new: true, runValidators: true }
+      );
+      return res.json(updatedVendor);
+    } catch (err) {
+      console.log(err);
+      return res.status(400).json(err);
+    }
+  }, 
+
+  async deletePet({ vendor, params }, res) {
+    const updatedVendor = await User.findOneAndUpdate(
+      { _id: vendor._id },
+      { $pull: { pets: { petId: params.petId } } },
+      { new: true }
+    );
+    if (!updatedVendor) {
+      return res.status(404).json({ message: "Couldn't find user with this id!" });
+    }
+    return res.json(updatedVendor);
+  },
+};
