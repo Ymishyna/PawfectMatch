@@ -1,6 +1,5 @@
 // import { Card, Fade, Container, Typography } from "@mui/material";
 // import { useEffect, useState } from "react";
-<<<<<<< HEAD
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
 // import { DonationInput } from "../Stripe/DonationInput";
@@ -71,7 +70,6 @@
 //       </Fade>
 //     </Card>
 //   );
-=======
 // import { CreatePayment } from "./hooks/createPayment";
 // import { Elements, } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
@@ -126,5 +124,4 @@
 //             </Fade>
 //         </Card>
 //     )
->>>>>>> 6139cb336ebcec233a2667b6f96520e597f74d64
 // }
