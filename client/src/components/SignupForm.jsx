@@ -100,7 +100,7 @@ const SignupForm = () => {
 
         <Form.Group>
           <Form.Label>Are you a pet Vendor?
-            <select>
+            <select value={userFormData.isVendor} onChange={handleInputChange}>
               <option>
                 Yes
               </option>

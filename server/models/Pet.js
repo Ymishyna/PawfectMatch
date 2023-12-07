@@ -1,6 +1,4 @@
 const { Schema, model } = require('mongoose');
-const vendorSchema = require('./Vendor');
-const Vendor = require('./Vendor');
 
 const petSchema = new Schema ({
         petID: {
@@ -55,4 +53,4 @@ const petSchema = new Schema ({
 
 const Pet = model('Pet', petSchema);
 
-module.exports = petSchema
+module.exports = Pet

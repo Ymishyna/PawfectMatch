@@ -44,30 +44,30 @@ module.exports = {
     res.json({ token, user });
   },
 
-  async newPet({ vendor, body }, res) {
-    console.log(vendor);
+  async newPet({ user, body }, res) {
+    console.log(user);
     try {
-      const updatedVendor = await vendor.findOneAndUpdate(
-        { _id: vendor._id },
+      const updatedUser = await user.findOneAndUpdate(
+        { _id: user._id },
         { $addToSet: { pets: body } },
         { new: true, runValidators: true }
       );
-      return res.json(updatedVendor);
+      return res.json(updatedUser);
     } catch (err) {
       console.log(err);
       return res.status(400).json(err);
     }
   }, 
 
-  async deletePet({ vendor, params }, res) {
-    const updatedVendor = await User.findOneAndUpdate(
-      { _id: vendor._id },
+  async deletePet({ user, params }, res) {
+    const updatedUser = await User.findOneAndUpdate(
+      { _id: user._id },
       { $pull: { pets: { petId: params.petId } } },
       { new: true }
     );
-    if (!updatedVendor) {
-      return res.status(404).json({ message: "Couldn't find vendor with this id!" });
+    if (!updatedUser) {
+      return res.status(404).json({ message: "Couldn't find user with this id!" });
     }
-    return res.json(updatedVendor);
+    return res.json(updatedUser);
   },
 };
