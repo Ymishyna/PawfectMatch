@@ -97,6 +97,21 @@ const SignupForm = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Are you a pet Vendor?
+            <select>
+              <option>
+                Yes
+              </option>
+              <option>
+                No
+              </option>
+            </select>
+            <Form.Control.Feedback type='invalid'>Please Select an option</Form.Control.Feedback>
+          </Form.Label>
+        </Form.Group>
+
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'

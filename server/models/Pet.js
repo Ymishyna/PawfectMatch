@@ -55,4 +55,4 @@ const petSchema = new Schema ({
 
 const Pet = model('Pet', petSchema);
 
-module.exports = Pet;
+module.exports = petSchema

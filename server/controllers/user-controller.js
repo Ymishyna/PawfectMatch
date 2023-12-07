@@ -26,6 +26,7 @@ module.exports = {
     const token = signToken(user);
     res.json({ token, user });
   },
+
   // login a user, sign a token, and send it back (to client/src/components/LoginForm.js)
   // {body} is destructured req.body
   async login({ body }, res) {
@@ -46,7 +47,7 @@ module.exports = {
   async newPet({ vendor, body }, res) {
     console.log(vendor);
     try {
-      const updatedVendor = await Vendor.findOneAndUpdate(
+      const updatedVendor = await vendor.findOneAndUpdate(
         { _id: vendor._id },
         { $addToSet: { pets: body } },
         { new: true, runValidators: true }
@@ -65,7 +66,7 @@ module.exports = {
       { new: true }
     );
     if (!updatedVendor) {
-      return res.status(404).json({ message: "Couldn't find user with this id!" });
+      return res.status(404).json({ message: "Couldn't find vendor with this id!" });
     }
     return res.json(updatedVendor);
   },

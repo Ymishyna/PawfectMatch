@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const petSchema = require('./Pet');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema ({
@@ -17,6 +18,11 @@ const userSchema = new Schema ({
         type: String,
         required: true,
       },
+      isVendor: {
+        type: Boolean,
+        required: true
+      },
+      pets: [petSchema]
     },
     // set this to use virtual below
     {
@@ -26,6 +32,10 @@ const userSchema = new Schema ({
       
 });
 
+userSchema.virtual('petCount').get(function() {
+  return this.pets.length;
+});
+
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -34,17 +44,6 @@ userSchema.pre('save', async function (next) {
 
   next();
 });
-
-
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
-    const saltRounds = 10;
-    this.password = await bcrypt.hash(this.password, saltRounds);
-  }
-
-  next();
-});
-
 
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);

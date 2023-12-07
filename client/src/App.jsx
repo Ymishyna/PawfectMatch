@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import { About } from "./components/pages/About";
 import { Contact } from "./components/pages/Contact";
 import DonationForm from './components/DonateForm';
+import SignupForm from "./components/SignupForm";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/SignupForm" element={<SignupForm />} />
         </Routes>
       </div>
     </>
