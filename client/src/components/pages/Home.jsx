@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Home.css"; // Make sure to adjust the path based on your project structure
+import "./Home.css";
 
 export const Home = () => {
   // State for search values and errors
