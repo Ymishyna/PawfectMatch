@@ -65,12 +65,12 @@ export const Contact = () => {
         <div className="card">
           <img
             className="card"
-            src={"https://buy.stripe.com/test_bIY00k20Ve0e1AQbII"}
+            src={"https://usercontent.gooddog.com/images/4rjwlks23ki0hlm9mrtvd35amfyl?crop=345-599x2489-3458&rotate=-270&type=manual"}
             alt="card donation"
           />
         </div>
       
-          <a href="#" className="btn "><button>Stripe</button></a>
+          <a href="https://buy.stripe.com/test_bIY00k20Ve0e1AQbII" className="btn "><button>Donate Today</button></a>
         
       </div>
 
