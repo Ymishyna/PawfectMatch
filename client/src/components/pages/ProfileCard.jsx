@@ -11,10 +11,10 @@ export const ProfileCard = ({ profileIndex }) => {
 
   return (
       <div class="card">
-        <img class="profilePic" src={imageSrc} alt={name} />
-        <div class="card-body">
+        <img className="profilePic" src={imageSrc} alt={name} />
+        <div className="card-body">
           <h1>{name}</h1>
-          <a classname="github-button" onClick={visitGithub}>
+          <a className="github-button" onClick={visitGithub}>
             <img
               src="./src/assets/GitHub-logo.png"
               className="githubLogo"
