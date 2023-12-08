@@ -26,6 +26,7 @@ module.exports = {
     const token = signToken(user);
     res.json({ token, user });
   },
+
   // login a user, sign a token, and send it back (to client/src/components/LoginForm.js)
   // {body} is destructured req.body
   async login({ body }, res) {
@@ -42,31 +43,31 @@ module.exports = {
     const token = signToken(user);
     res.json({ token, user });
   },
-}
-//   async saveBook({ user, body }, res) {
-//     console.log(user);
-//     try {
-//       const updatedUser = await User.findOneAndUpdate(
-//         { _id: user._id },
-//         { $addToSet: { savedBooks: body } },
-//         { new: true, runValidators: true }
-//       );
-//       return res.json(updatedUser);
-//     } catch (err) {
-//       console.log(err);
-//       return res.status(400).json(err);
-//     }
-//   },
-//   // remove a book from `savedBooks`
-//   async deleteBook({ user, params }, res) {
-//     const updatedUser = await User.findOneAndUpdate(
-//       { _id: user._id },
-//       { $pull: { savedBooks: { bookId: params.bookId } } },
-//       { new: true }
-//     );
-//     if (!updatedUser) {
-//       return res.status(404).json({ message: "Couldn't find user with this id!" });
-//     }
-//     return res.json(updatedUser);
-//   },
-// };
+
+  async newPet({ user, body }, res) {
+    console.log(user);
+    try {
+      const updatedUser = await user.findOneAndUpdate(
+        { _id: user._id },
+        { $addToSet: { pets: body } },
+        { new: true, runValidators: true }
+      );
+      return res.json(updatedUser);
+    } catch (err) {
+      console.log(err);
+      return res.status(400).json(err);
+    }
+  }, 
+
+  async deletePet({ user, params }, res) {
+    const updatedUser = await User.findOneAndUpdate(
+      { _id: user._id },
+      { $pull: { pets: { petId: params.petId } } },
+      { new: true }
+    );
+    if (!updatedUser) {
+      return res.status(404).json({ message: "Couldn't find user with this id!" });
+    }
+    return res.json(updatedUser);
+  },
+};

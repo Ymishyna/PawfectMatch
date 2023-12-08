@@ -29,7 +29,9 @@ export const Navbar = () => {
           <NavLink to="/contact">Contact/Donate</NavLink>
         </li>
         <li>
+
           <NavLink to="/login">Login</NavLink>
+
         </li>
       </ul>
     </nav>

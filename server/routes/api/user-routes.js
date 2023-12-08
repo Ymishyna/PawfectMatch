@@ -2,6 +2,8 @@ const router = require('express').Router();
 const {
   createUser,
   getSingleUser,
+  newPet,
+  deletePet,
   login,
 } = require('../../controllers/user-controller');
 

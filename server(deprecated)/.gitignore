@@ -1,5 +1,0 @@
-# .gitignore (Server)
-node_modules/
-logs/
-dist/
-server/.env

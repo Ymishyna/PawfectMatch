@@ -1,8 +1,11 @@
 const { Schema, model } = require('mongoose');
-const vendorSchema = require('./Vendor');
-const Vendor = require('./Vendor');
 
 const petSchema = new Schema ({
+        petID: {
+            type: String,
+            required: true,
+            unique: true
+        },
         name: {
             type: String,
             required: true,
@@ -50,4 +53,4 @@ const petSchema = new Schema ({
 
 const Pet = model('Pet', petSchema);
 
-module.exports = Pet;
+module.exports = Pet
