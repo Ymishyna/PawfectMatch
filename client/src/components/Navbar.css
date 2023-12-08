@@ -11,7 +11,8 @@ nav {
   padding: 0;
   background-color: olivedrab;
   position: sticky;
-  top: 0;
+  width: 100%;
+  top: 0px;
 }
 
 nav .title {

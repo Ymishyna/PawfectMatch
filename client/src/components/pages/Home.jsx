@@ -47,7 +47,7 @@ export const Home = () => {
       <div className="search-box">
         <div className="q1">
           <h3>Cat or Dog?</h3>
-          <select 
+          <select
             value={searchValue1}
             onChange={(e) => setSearchValue1(e.target.value)}
           >
@@ -59,7 +59,7 @@ export const Home = () => {
         </div>
         <div className="q2">
           <h3>Age range?</h3>
-          <select 
+          <select
             value={searchValue2}
             onChange={(e) => setSearchValue2(e.target.value)}
           >
@@ -71,7 +71,7 @@ export const Home = () => {
         </div>
         <div className="q3">
           <h3>Male or Female?</h3>
-          <select 
+          <select
             value={searchValue3}
             onChange={(e) => setSearchValue3(e.target.value)}
           >
@@ -87,6 +87,17 @@ export const Home = () => {
       </div>
       <div className="logo">
         <img src="./src/assets/Logo.png" alt="Logo" />
+      </div>
+      <div className="flip-card">
+        <div className="container">
+          <div className="card">
+            <div className="front"></div>
+            <div className="back">
+              <h1>back of card</h1>
+              <p>info on back of card</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

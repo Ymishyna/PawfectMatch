@@ -7,12 +7,12 @@
 
 .card h1 {
   margin: 1.25rem 0rem 1rem;
-  color: white;
+  color: black;
   font-size: 24px;
 }
 
 .card-body {
-  background-color: olivedrab;
+  background-color: orange;
   border-radius: 15rem;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,7 @@
 
 .profilePic {
   margin: 0rem;
-  border: 0.5rem solid orange;
+  border: 0.5rem solid olivedrab;
   border-radius: 50%;
   width: 15rem;
   height: auto;
@@ -35,8 +35,7 @@
 }
 
 .githubLogo {
-  filter: invert(100%);
-  margin: 0rem;
+margin: 0rem;
   width: auto;
   height: 50px;
   cursor: pointer;

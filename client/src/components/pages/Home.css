@@ -6,16 +6,17 @@
 }
 
 .search-box {
-  width: 25%;
+  margin: 0 10rem;
+  width: 22.5%;
   padding: 1.5rem;
   background-color: olivedrab;
   display: flex;
   flex-direction: column;
-  border-radius: 5rem;
+  border-radius: 2rem;
 }
 
 select {
-  width: 150px;
+  width: 20rem;
   padding: 8px;
   margin: 5px;
   border: 1px solid #ddd;
@@ -40,7 +41,7 @@ select {
   align-self: center;
   background-color: orange;
   color: white;
-  margin: 1.5rem;
+  margin: 0.5rem;
   border: none;
   border-radius: 5rem;
   font-size: 1.5em;
@@ -53,7 +54,7 @@ select {
 }
 
 .logo img {
-  margin-right: 5rem;
+  margin: 0 10rem;
   height: 22rem;
   width: auto;
 }
