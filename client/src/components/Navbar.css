@@ -7,7 +7,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin-top: auto;
   padding: 0;
   background-color: olivedrab;
   position: sticky;
@@ -15,12 +15,13 @@ nav {
 }
 
 nav .title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 1rem;
   font-weight: bold;
   text-decoration: none;
   color: orange;
 }
+
 
 nav ul {
   display: flex;
@@ -32,6 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
+  font-size: 1.25rem;
   display: block;
   text-decoration: none;
   color: white;
@@ -69,10 +71,11 @@ nav .menu span {
   }
   nav {
     flex-direction: column;
-    align-items: start;
+    align-items: stretch; /* Align items to stretch across the width */
   }
   nav ul.open {
     display: flex;
+    width: 100%; /* Make the navigation list take full width */
   }
   nav ul {
     display: none;

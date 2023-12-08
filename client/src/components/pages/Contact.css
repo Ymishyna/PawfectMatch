@@ -1,0 +1,67 @@
+form {
+  float: left;
+  background: olivedrab;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 5%;
+  padding: 2rem 4rem;
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 1rem;
+}
+
+form h3 {
+  text-align: center;
+  color: orange;
+  font-size: 2.5rem;
+  font-weight: 750;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  color: orange;
+  border: 0;
+  margin: 0.5rem;
+  padding: 1rem;
+  outline: none;
+  background: whitesmoke;
+  font-size: 16px;
+  border-radius: 0.5rem;
+}
+
+form button {
+  padding: 1rem;
+  background: orange;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+
+form button:hover {
+  background: tan;
+  color: white;
+}
+
+.validation-message {
+  color: red;
+  font-size: 14px;
+  margin: 0.5rem;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  form {
+    margin: 2rem 0%;
+    padding: 2rem;
+  }
+
+  form button {
+    width: auto;
+  }
+}
