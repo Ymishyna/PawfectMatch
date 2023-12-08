@@ -86,7 +86,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Label htmlFor="email"></Form.Label>
           <Form.Control
             type="email"
             placeholder="Your email address"
@@ -100,7 +100,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="password">Password</Form.Label>
+          <Form.Label htmlFor="password"></Form.Label>
           <Form.Control
             type="password"
             placeholder="Your password"
