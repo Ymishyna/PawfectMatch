@@ -33,7 +33,7 @@ function App() {
           <Route path="/login" element={<SignupForm />} />
 
         </Routes>
-        
+        </div>
     </>
   );
 }

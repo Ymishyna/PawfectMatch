@@ -88,6 +88,24 @@ export const Home = () => {
       <div className="logo">
         <img src="./src/assets/Logo.png" alt="Logo" />
       </div>
+
+      <div className="card1" class="card">
+        <div class="card-side front">
+            <div>Astro</div>
+            <img src={("https://www.bing.com/images/search?q=boxer%20puppy%20jpg&FORM=IQFRBA&id=6512E3C77C5757AFDE8848BBAA69AFE068FDA060")}/>
+        </div>
+        <div class="card-side back">
+          <div>
+            <p> Astro loves to be outside</p>
+            <ul>
+                <li>4 months old</li>
+                <li>Breed: Boxer</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+
     </div>
   );
 };
