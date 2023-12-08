@@ -22,7 +22,7 @@ const userSchema = new Schema ({
         type: Boolean,
         required: true
       },
-      pets: [petSchema]
+      // pets: [Pet]
     },
     // set this to use virtual below
     {
