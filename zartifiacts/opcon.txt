@@ -6,7 +6,8 @@ OPERATIONAL CONCEPT for PawfectMatch Project
 Operational Concept summary.
 
 PawfectMatch is a simulated rescue pet adoption service catering primarily to dogs and cats.
-It is simulated as it would be unlawful for us to operate an actual service without the proper licenses and certificates. Our concept is to use to seed the pet database using the api:  	https://rescuegroups.org/services/adoptable-pet-data-api/
+It is simulated as it would be unlawful for us to operate an actual service without the proper licenses and certificates. Our concept is to use to seed the pet database using the api:  	
+ 	https://rescuegroups.org/services/adoptable-pet-data-api/
 Once the database is seeded, our demonstration will have a project team member login and demonstrate the  following process flow:
 
 	1. User Logins and authenticates.
@@ -16,7 +17,7 @@ Once the database is seeded, our demonstration will have a project team member l
 	5. User then selects a pet to adopt and submits the selection.
 	6. User is then presented with an adoption form.
 	7. User fills out form and submits. 
-	8. User receives approval response from the service andthe  logistics to receive the adopted pet. 
+	8. User receives approval response from the service and the  logistics to receive the adopted pet. 
 	9. User is presented with an option to donate.
 	10. User fills out donation form and uses <STRIPE> to donate.
 	11. User receives a thank you response.
