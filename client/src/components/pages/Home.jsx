@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+// import ReactCardFlip from 'react-card-flip'
 
 export const Home = () => {
   // State for search values and errors
@@ -89,7 +90,7 @@ export const Home = () => {
         <img src="./src/assets/Logo.png" alt="Logo" />
       </div>
 
-      <div className="card1" class="card">
+      {/* <div className="card1" class="card">
         <div class="card-side front">
             <div>Astro</div>
             <img src={("https://www.bing.com/images/search?q=boxer%20puppy%20jpg&FORM=IQFRBA&id=6512E3C77C5757AFDE8848BBAA69AFE068FDA060")}/>
@@ -103,7 +104,7 @@ export const Home = () => {
             </ul>
           </div>
         </div>
-    </div>
+    </div> */}
 
 
     </div>
