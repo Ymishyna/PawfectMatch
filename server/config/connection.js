@@ -9,9 +9,9 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://yanamishina92:Password@cluster0.1l3qfmp.mongodb.net/PawfectDB?retryWrites=true&w=majority');
+//mongoose.connect('mongodb+srv://yanamishina92:Password@cluster0.1l3qfmp.mongodb.net/PawfectDB?retryWrites=true&w=majority');
 
-//mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/PawfectDB');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/PawfectDB');
 
 module.exports = mongoose.connection;
 
