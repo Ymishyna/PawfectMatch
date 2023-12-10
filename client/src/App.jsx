@@ -11,6 +11,7 @@ import { Navbar } from "./components/Navbar";
 // import { QueryProvider } from "./components/QueryProvider";
 // import { DonateForm } from "./components/DonateForm";
 import { Animal } from "./components/Animalcard";
+// import {flipCard} from "./components/pages/Home";
 
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/pages/Home";
@@ -33,7 +34,16 @@ function App() {
           <Route path="/login" element={<SignupForm />} />
 
         </Routes>
+       
         </div>
+        {/* <ReactCardFlip>
+          <div className='card'>
+            <h1>Front</h1>
+          </div>
+          <div className='card card-back'>
+            <h1>Back</h1>
+          </div>
+        </ReactCardFlip> */}
     </>
   );
 }
