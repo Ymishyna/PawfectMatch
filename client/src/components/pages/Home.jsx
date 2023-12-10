@@ -12,20 +12,20 @@ const pets = [
     
   },
   {
-    name: "Astro",
-    image: "https://th.bing.com/th/id/R.be2739bdbf12662f392535182938cbab?rik=YKD9aOCvaaq7SA&riu=http%3a%2f%2ffallinpets.com%2fwp-content%2fuploads%2f2016%2f12%2fBoxer-puppy.jpg&ehk=dKGgrkgYxM754jHdkFdVLwRLb14TkJefLrXc8xv%2b4kU%3d&risl=&pid=ImgRaw&r=0",
-    bio: "Astro loves to be outside",
-    breed: "Boxer",
-    age: "4 months"
+    name: "MeowMeowFuzzyFace",
+    image: "https://lh6.googleusercontent.com/proxy/vRaecxcZhidxRU85sVE-DI4OIwpEE723HEvyhZ8BSxWeqjj_QIOKqPT8Y_P8LhAFXn-srvAGtJxrz6OT0aJU1R4XypC-4bQSB95bBLC9-0NqB-d7YO6UX1Ync6NOyNacTMDwON7EIkg4Cq-iHkopM_o=s0-d",
+    bio: "MeowMewoFuzzyFace is a lovable kitten",
+    breed: "Calico",
+    age: "2 months"
 
     
   },
   {
-    name: "Astro",
-    image: "https://th.bing.com/th/id/R.be2739bdbf12662f392535182938cbab?rik=YKD9aOCvaaq7SA&riu=http%3a%2f%2ffallinpets.com%2fwp-content%2fuploads%2f2016%2f12%2fBoxer-puppy.jpg&ehk=dKGgrkgYxM754jHdkFdVLwRLb14TkJefLrXc8xv%2b4kU%3d&risl=&pid=ImgRaw&r=0",
+    name: "Bobby",
+    image: "https://talktodogs.com/wp-content/uploads/2020/12/Labrador-Puppy-Golden-683x1024.jpg",
     bio: "Astro loves to be outside",
-    breed: "Boxer",
-    age: "4 months"
+    breed: "Labrador",
+    age: "5 months"
 
     
   }
