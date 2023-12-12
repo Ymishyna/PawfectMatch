@@ -1,3 +1,4 @@
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import { useQuery, useMutation } from "@apollo/client";
 import { PET_QUERY } from "../../utils/queries";
 import { REMOVE_PET } from "../../utils/mutations";
@@ -31,9 +32,48 @@ const savedPet = () => {
     }
     return (
         <>
-        <div fluid 
+        <div fluid className="text-light bg-dark p-5">
+            <Container>
+                <h1>Viewing {userData.username}'s future pets!</h1>
+            </Container>
+        </div>
+        <Container>
+            <h2 className="pt-5">
+                {userData.savedPets.length
+                ? `Viewing ${userData.savedPets.length} saved ${userData.savedPets.length === 1 ? "pet" : "pets"}:`
+                : "You have no saved Pets!"}
+            </h2>
+            <ROW>
+            {userData.savedPets.map((pet) => {
+            return (
+              <Col md="4">
+                <Card key={pet.petId} border="dark">
+                  {pets.image ? (
+                    <Card.Img
+                      src={pets.image}
+                      alt={`Your pets name is ${pet.name}`}
+                      variant="top"
+                    />
+                  ) : null}
+                  <Card.Body>
+                    <Card.Name>{pet.name}</Card.Name>
+                    <p className="small">Breed: {pet.breed}</p>
+                    <Card.Text>{pet.bio}</Card.Text>
+                    <Button
+                      className="btn-block btn-danger"
+                      onClick={() => handleDeleteBook(pet.petId)}
+                    >
+                      Remove this Pet!
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
+            </ROW>
+        </Container>
         </>
-    )
+    );
 };
 
 export default SavedPets;
