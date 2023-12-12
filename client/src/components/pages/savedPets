@@ -1,38 +1,48 @@
-import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import { useQuery, useMutation } from "@apollo/client";
-import { PET_QUERY } from "../../utils/queries";
-import { REMOVE_PET } from "../../utils/mutations";
+// import { Container, Card, Button, Row, Col } from "react-bootstrap";
+// import { useQuery, useMutation } from "@apollo/client";
+// import { PET_QUERY } from "../../utils/queries";
+// import { REMOVE_PET } from "../../utils/mutations";
+import { useState, useEffect } from "react";
 
+const savedPets = () => {
+    const [ loading, setLoading] = useState(true);
+    const [ savedPets, setSavedPets ] = useState([]);
 
-const savedPet = () => {
-    const { loading, data} = useQuery(PET_QUERY);
-    const [ remove_pet, { error }] = useMutation(REMOVE_PET);
-
-    const userData = data?.me || {};
-
-    const handleDeletedPet = async (petId) => {
-        const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-        if (!token) {
-            return false;
-        }
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch("/api/pets"); // Replace with your API endpoint
+            const data = await response.json();
+            setSavedPets(data);
+            setLoading(false);
+          } catch (error) {
+            console.error(error);
+            setLoading(false);
+          }
+        };
+    
+        fetchData();
+      }, []);
+    
+      const handleDeletePet = async (petId) => {
         try {
-            const { data } = await remove_pet({
-                variables: {petId},
-            });
-
-            removePetId(petId);
-        } catch (err) {
-            console.error(err);
+          await fetch(`/api/pets/${petId}`, {
+            method: "DELETE",
+          });
+    
+          // Assuming removePetId is defined
+          removePetId(petId);
+        } catch (error) {
+          console.error(error);
         }
-    };
+      };
 
     if (loading) {
         return <h2>LOADING...</h2>;
     }
     return (
         <>
-        <div fluid className="text-light bg-dark p-5">
+        {/* <div fluid className="text-light bg-dark p-5">
             <Container>
                 <h1>Viewing {userData.username}'s future pets!</h1>
             </Container>
@@ -43,7 +53,7 @@ const savedPet = () => {
                 ? `Viewing ${userData.savedPets.length} saved ${userData.savedPets.length === 1 ? "pet" : "pets"}:`
                 : "You have no saved Pets!"}
             </h2>
-            <ROW>
+            <Row>
             {userData.savedPets.map((pet) => {
             return (
               <Col md="4">
@@ -70,8 +80,8 @@ const savedPet = () => {
               </Col>
             );
           })}
-            </ROW>
-        </Container>
+            </Row>
+        </Container> */}
         </>
     );
 };
