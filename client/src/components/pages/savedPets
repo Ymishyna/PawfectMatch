@@ -1,0 +1,39 @@
+import { useQuery, useMutation } from "@apollo/client";
+import { PET_QUERY } from "../../utils/queries";
+import { REMOVE_PET } from "../../utils/mutations";
+
+
+const savedPet = () => {
+    const { loading, data} = useQuery(PET_QUERY);
+    const [ remove_pet, { error }] = useMutation(REMOVE_PET);
+
+    const userData = data?.me || {};
+
+    const handleDeletedPet = async (petId) => {
+        const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+        if (!token) {
+            return false;
+        }
+        try {
+            const { data } = await remove_pet({
+                variables: {petId},
+            });
+
+            removePetId(petId);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    if (loading) {
+        return <h2>LOADING...</h2>;
+    }
+    return (
+        <>
+        <div fluid 
+        </>
+    )
+};
+
+export default SavedPets;
