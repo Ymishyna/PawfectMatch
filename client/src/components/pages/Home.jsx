@@ -7,7 +7,9 @@ const pets = [
     image: "https://th.bing.com/th/id/R.be2739bdbf12662f392535182938cbab?rik=YKD9aOCvaaq7SA&riu=http%3a%2f%2ffallinpets.com%2fwp-content%2fuploads%2f2016%2f12%2fBoxer-puppy.jpg&ehk=dKGgrkgYxM754jHdkFdVLwRLb14TkJefLrXc8xv%2b4kU%3d&risl=&pid=ImgRaw&r=0",
     bio: "Astro loves to be outside",
     breed: "Boxer",
-    age: "4 months"
+    age: "4 months",
+    gender: "Male",
+    location: "Orange County Animal Services, 2769 Conroy Rd, Orlando, FL 32839"
 
     
   },
@@ -16,7 +18,9 @@ const pets = [
     image: "https://lh6.googleusercontent.com/proxy/vRaecxcZhidxRU85sVE-DI4OIwpEE723HEvyhZ8BSxWeqjj_QIOKqPT8Y_P8LhAFXn-srvAGtJxrz6OT0aJU1R4XypC-4bQSB95bBLC9-0NqB-d7YO6UX1Ync6NOyNacTMDwON7EIkg4Cq-iHkopM_o=s0-d",
     bio: "MeowMewoFuzzyFace is a lovable kitten",
     breed: "Calico",
-    age: "2 months"
+    age: "2 months",
+    gender: "Female",
+    location: "777 W Central Blvd, Orlando, FL 32805"
 
     
   },
@@ -25,7 +29,9 @@ const pets = [
     image: "https://talktodogs.com/wp-content/uploads/2020/12/Labrador-Puppy-Golden-683x1024.jpg",
     bio: "Astro loves to be outside",
     breed: "Labrador",
-    age: "5 months"
+    age: "5 months",
+    gender: "Male",
+    location: "Orange County Animal Services, 2769 Conroy Rd, Orlando, FL 32839"
 
     
   }
@@ -144,6 +150,8 @@ export const Home = () => {
             <ul>
               <li>{pet.age}</li>
               <li>{pet.breed}</li>
+              <li>{pet.gender}</li>
+              <li>{pet.location}</li>
             </ul>
 
           </div>
