@@ -1,12 +1,18 @@
+.active {
+  background-color: red;
+  color: lemonchiffon;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
   padding: 0;
-  background-color: olivedrab;
+  background-color: lightblue;
   position: sticky;
   top: 0;
+  border-bottom: .5rem solid navy;
 }
 
 .title {
@@ -15,13 +21,13 @@ nav {
   font-size: 3.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: orange;
+  color: navy;
 }
 
 .logo img {
   width: 110px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
-  margin: 1rem 2rem 0rem 2rem; /* Adjust the margin as needed */
+  margin: 1rem 2rem 0rem 2rem;
 }
 
 nav ul {
@@ -37,17 +43,16 @@ nav ul li a {
   font-size: 1.25rem;
   display: block;
   text-decoration: none;
-  color: white;
+  color: navy;
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
 
 nav ul li a:not(.active):hover {
-  background-color: tan;
-  color: white;
+  background-color: rgb(255, 255, 122);
+  color: navy;
 }
-
 
 .menu {
   display: none;
@@ -57,7 +62,7 @@ nav ul li a:not(.active):hover {
 .menu span {
   width: 2.25rem;
   height: 0.4rem;
-  background-color: white;
+  background-color: navy;
   border-radius: 0.25rem;
   margin: 0.25rem;
   display: block;

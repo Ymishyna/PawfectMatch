@@ -6,21 +6,22 @@
 }
 
 .search-box {
-  width: 25%;
+  width: 35%;
   padding: 1.5rem;
-  background-color: olivedrab;
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
-  border-radius: 5rem;
+  border-radius: 2.5rem;
 }
 
 select {
-  width: 150px;
+  width: 25rem;
   padding: 8px;
   margin: 5px;
-  border: 1px solid #ddd;
   border-radius: 0.5rem;
   font-size: 0.9em;
+  background-color: navy;
+  color: FFFF66;
 }
 
 .q1,
@@ -29,6 +30,7 @@ select {
   align-self: center;
   display: flex;
   flex-direction: column;
+  color: navy;
 }
 
 .error {
@@ -40,8 +42,8 @@ select {
   width: 40%;
   height: 2.5rem;
   align-self: center;
-  background-color: orange;
-  color: white;
+  background-color: navy;
+  color: rgb(255, 255, 122);
   margin: 1.5rem;
   border: none;
   border-radius: 5rem;
@@ -50,7 +52,7 @@ select {
 }
 
 .searchButton:hover {
-  background-color: orange;
+  background-color: red;
   transition: background-color 0.3s ease-in-out;
 }
 
