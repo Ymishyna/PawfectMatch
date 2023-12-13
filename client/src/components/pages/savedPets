@@ -24,7 +24,7 @@ const savedPets = () => {
         fetchData();
       }, []);
     
-      const handleDeletePet = async (petId) => {
+      const handleDeletegitPet = async (petId) => {
         try {
           await fetch(`/api/pets/${petId}`, {
             method: "DELETE",
