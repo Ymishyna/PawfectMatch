@@ -1,6 +1,6 @@
 .home {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Stack elements vertically */
   align-items: center;
   padding: 20px;
 }
@@ -23,7 +23,9 @@ select {
   font-size: 0.9em;
 }
 
-.q1, .q2, .q3 {
+.q1,
+.q2,
+.q3 {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -45,21 +47,33 @@ select {
   border-radius: 5rem;
   font-size: 1.5em;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .searchButton:hover {
   background-color: orange;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.card , .react-card-flipper :is(.react-card-back, .react-card-front) {
-  width: 10rem;
-  min-height: 33rem;
-  
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px; /* Add space between search box and card container */
 }
+
+.card {
+  margin-bottom: 20px; /* Add space between individual cards */
+}
+
+.react-card-flipper :is(.react-card-back, .react-card-front) {
+  width: 10rem;
+  max-height: 33rem;
+}
+
 .react-card-flipper img {
   width: 100%;
-  
+  max-height: 33rem;
 }
 
 /* Media Queries for Mobile */
@@ -70,11 +84,6 @@ select {
 
   .search-box {
     width: 100%; /* Full width on smaller screens */
-    margin-bottom: 1.5rem; /* Add some space between the search box and logo */
-  }
-
-  .logo img {
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 1.5rem; /* Add some space below the logo */
+    margin-bottom: 1.5rem; /* Add some space between the search box and card container */
   }
 }
