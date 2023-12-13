@@ -131,9 +131,6 @@ export const Home = () => {
           Search
         </button>
       </div>
-      <div className="logo">
-        <img src="./src/assets/Logo.png" alt="Logo" />
-      </div>
 
 { pets.map((pet,i) => 
       <div className='card' onMouseLeave={flipOnHover(i, false)}>

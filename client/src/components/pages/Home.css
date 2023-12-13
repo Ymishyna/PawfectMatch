@@ -52,12 +52,6 @@ select {
   background-color: orange;
 }
 
-.logo img {
-  margin-right: 5rem;
-  height: 22rem;
-  width: auto;
-}
-
 .card , .react-card-flipper :is(.react-card-back, .react-card-front) {
   width: 10rem;
   min-height: 33rem;
