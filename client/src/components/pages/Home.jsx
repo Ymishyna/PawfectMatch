@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import ReactCardFlip from "react-card-flip";
+import { savedPets } from "./savedPets";
 
 const pets = [
   {
