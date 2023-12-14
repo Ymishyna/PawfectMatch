@@ -132,13 +132,13 @@ export const Home = () => {
 
       <div className="card-container">
         {pets.map((pet, i) => (
-          <div className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
+          <div style={{backgroundColor: "lightblue", borderRadius: "5rem" }} className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
             <ReactCardFlip isFlipped={flipped[i]} flipDirection="horizontal">
               <div onMouseEnter={flipOnHover(i, true)}>
-                <div>{pet.name}</div>
-                <img src={pet.image} alt={pet.name} />
+                <div style={{color: "navy", fontSize: "1.25rem", padding: "1rem"}}>{pet.name}</div>
+                <img style={{ maxHeight: "20rem", maxWidth: "15rem", borderRadius: "2rem", border: ".5rem solid navy"}} src={pet.image} alt={pet.name} />
               </div>
-              <div className="back-of-card">
+              <div style={{maxHeight: "100%"}} className="back-of-card">
                 <p>{pet.bio}</p>
                 <ul>
                   <li>{pet.age}</li>

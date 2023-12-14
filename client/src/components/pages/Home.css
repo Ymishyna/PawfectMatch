@@ -6,11 +6,11 @@
 }
 
 .search-box {
-  width: 35%;
-  padding: 1.5rem;
+  width: 95%;
+  padding: 2rem;
   background-color: lightblue;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 2.5rem;
 }
 
@@ -44,7 +44,7 @@ select {
   align-self: center;
   background-color: navy;
   color: #ffff66;
-  margin: 1.5rem;
+  margin: .5rem;
   border: none;
   border-radius: 5rem;
   font-size: 1.5em;
@@ -80,6 +80,7 @@ select {
 }
 
 .back-of-card {
+  object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
