@@ -70,7 +70,7 @@ select {
 
 .react-card-flipper :is(.react-card-back, .react-card-front) {
   width: 10rem;
-  max-height: 33rem;
+  height: 3rem;
 }
 
 .react-card-flipper img {

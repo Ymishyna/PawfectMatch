@@ -12,7 +12,7 @@ export const About = () => {
           justifyContent: "space between",
         }}
       >
-        <p style={{width: "75%", position: "center"}}>
+        <p style={{width: "75%", position: "center", padding: "20px", margin: "15px", fontFamily:"cursive", textAlign: "center" }}>
           A team of five individuals is devoted to securing caring homes for
           every cat and dog. With a passion for shelter advocacy and expertise
           in guiding and rehabilitating animals, they work tirelessly to make a

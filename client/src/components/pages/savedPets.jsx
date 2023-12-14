@@ -50,7 +50,7 @@ export const savedPets = () => {
     }
 
 
-    
+   else  return (
     <div className="card-container">
     {pets.map((pet, i) => (
       <div className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
@@ -72,4 +72,5 @@ export const savedPets = () => {
       </div>
     ))}
   </div>
+   )
     };
