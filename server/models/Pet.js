@@ -19,6 +19,10 @@ const petSchema = new Schema ({
             type: String,
             required: false
         },
+        gender: {
+            type: String,
+            required: false
+        },
         color: {
             type: String,
             required: false

@@ -89,6 +89,12 @@ select {
   border-radius: 0.5rem;
 }
 
+.logo img {
+  margin: 0 10rem;
+  height: 22rem;
+  width: auto;
+}
+
 /* Media Queries for Mobile */
 @media only screen and (max-width: 768px) {
   .home {
