@@ -75,7 +75,8 @@ select {
 
 .react-card-flipper img {
   width: 100%;
-  max-height: 33rem;
+  height: 500px;
+  object-fit: cover;
 }
 
 .back-of-card {
