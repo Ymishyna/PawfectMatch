@@ -1,0 +1,16 @@
+PROJECT 3 TEST PLAN
+
+1. Test001:  run the client amd verify that home page renders.
+	defect001.1  MAIN PAGE: Client home page is too wide and takes too much horizontal and needs to be cut back.
+	defect001.2  ABOUTUS: add app description - marketing words.
+	defect001.3  MAIN PAGE: what is back of card?
+	defect001.4  MAIN PAGE NAV BAR:  does not span full width of page.
+	defect001.5  MAIN PAGE SEARCH BOX:  not aligned properly.
+	defect001.6  MAIN PAGE: missing footer.
+	defect001.7  MAIN PAGE: recommend putting logo in heading on left side.
+	defect001.8  MAIN PAGE contact us:  email validation code not working. contact.jsx file error.
+	defect001.9  MAIN PAGE login:  login is not working and signup is missing for new users.
+
+2. Test002: start the server and test.
+	defect002.1 Signon function is missing,
+	defect002.2 Remove the are you are a pet vendor.

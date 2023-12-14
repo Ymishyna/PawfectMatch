@@ -22,7 +22,7 @@ const userSchema = new Schema ({
         type: Boolean,
         required: true
       },
-      pets: [petSchema]
+      // pets: [Pet]
     },
     // set this to use virtual below
     {
@@ -48,8 +48,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-
-
 
 
 const User = model('User', userSchema);

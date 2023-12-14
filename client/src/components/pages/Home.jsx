@@ -89,47 +89,45 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="search-box">
-        <div className="selections">
-          <div className="q1">
-            <h3>Cat or Dog?</h3>
-            <select
-              value={searchValue1}
-              onChange={(e) => setSearchValue1(e.target.value)}
-            >
-              <option value="">Choose one</option>
-              <option value="Dog">Dog</option>
-              <option value="Cat">Cat</option>
-            </select>
-            {error1 && <p className="error">{error1}</p>}
-          </div>
-          <div className="q2">
-            <h3>Age range?</h3>
-            <select
-              value={searchValue2}
-              onChange={(e) => setSearchValue2(e.target.value)}
-            >
-              <option value="">Choose one</option>
-              <option value="< 5 years">Less than 5 years</option>
-              <option value="> 5 years">More than 5 years</option>
-            </select>
-            {error2 && <p className="error">{error2}</p>}
-          </div>
-          <div className="q3">
-            <h3>Male or Female?</h3>
-            <select
-              value={searchValue3}
-              onChange={(e) => setSearchValue3(e.target.value)}
-            >
-              <option value="">Choose one</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-            {error3 && <p className="error">{error3}</p>}
-          </div>
-          <button className="searchButton" onClick={handleSearchSubmit}>
-            Search
-          </button>
+        <div className="q1">
+          <h3>Cat or Dog?</h3>
+          <select
+            value={searchValue1}
+            onChange={(e) => setSearchValue1(e.target.value)}
+          >
+            <option value="">Choose one</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+          </select>
+          {error1 && <p className="error">{error1}</p>}
         </div>
+        <div className="q2">
+          <h3>Age range?</h3>
+          <select
+            value={searchValue2}
+            onChange={(e) => setSearchValue2(e.target.value)}
+          >
+            <option value="">Choose one</option>
+            <option value="< 5 years">Less than 5 years</option>
+            <option value="> 5 years">More than 5 years</option>
+          </select>
+          {error2 && <p className="error">{error2}</p>}
+        </div>
+        <div className="q3">
+          <h3>Male or Female?</h3>
+          <select
+            value={searchValue3}
+            onChange={(e) => setSearchValue3(e.target.value)}
+          >
+            <option value="">Choose one</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          {error3 && <p className="error">{error3}</p>}
+        </div>
+        <button className="searchButton" onClick={handleSearchSubmit}>
+          Search
+        </button>
       </div>
 
       <div className="card-container">
@@ -152,6 +150,17 @@ export const Home = () => {
             </ReactCardFlip>
           </div>
         ))}
+      </div>
+      <div className="flip-card">
+        <div className="container">
+          <div className="card">
+            <div className="front"></div>
+            <div className="back">
+              <h1>back of card</h1>
+              <p>info on back of card</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

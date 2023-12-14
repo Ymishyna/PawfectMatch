@@ -19,4 +19,6 @@ router.route('/me').get(authMiddleware, getSingleUser);
 
 router.route('/pets/:petId').delete(authMiddleware);
 
+router.route('/pets/').post(newPet).put(authMiddleware);
+
 module.exports = router;
