@@ -30,8 +30,14 @@ export const Contact = () => {
   };
 
   return (
-    <div style={{display:"flex",flexDirection:"row", justifyContent:"space between"}}>
-      <form  style= {{width:"75%"}}onSubmit={handleFormSubmit}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space between",
+      }}
+    >
+      <form className="contact-form" onSubmit={handleFormSubmit}>
         <h3>Contact Us</h3>
         <input
           type="text"
@@ -61,22 +67,21 @@ export const Contact = () => {
         <button type="submit">Submit</button>
       </form>
 
-      <div style={{width:"25%"}}>
-        <div className="card">
+        <div className="donate-card">
+          <h3>Donate</h3>
           <img
-            className="card"
-            src={"https://usercontent.gooddog.com/images/4rjwlks23ki0hlm9mrtvd35amfyl?crop=345-599x2489-3458&rotate=-270&type=manual"}
+            className="donate-image"
+            src={
+              "https://usercontent.gooddog.com/images/4rjwlks23ki0hlm9mrtvd35amfyl?crop=345-599x2489-3458&rotate=-270&type=manual"
+            }
             alt="card donation"
           />
+          <a
+            href="https://buy.stripe.com/test_bIY00k20Ve0e1AQbII"
+          style={{width: "100%"}}>
+            <button>Donate Today</button>
+          </a>
         </div>
-      
-          <a href="https://buy.stripe.com/test_bIY00k20Ve0e1AQbII" className="btn "><button>Donate Today</button></a>
-        
-      </div>
-
-
     </div>
-
   );
-
-}
+};
