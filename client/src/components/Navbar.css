@@ -1,6 +1,6 @@
 .active {
   background-color: red;
-  color: lemonchiffon;
+  color: #FFFF66;
 }
 
 nav {
@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:not(.active):hover {
-  background-color: rgb(255, 255, 122);
+  background-color: #FFFF66;
   color: navy;
 }
 
@@ -83,7 +83,7 @@ nav ul li a:not(.active):hover {
     position: absolute;
     top: 4rem; /* Adjust the top position as needed */
     left: 0;
-    background-color: olivedrab;
+    background-color: lightblue;
   }
 
   ul.open {

@@ -1,18 +1,19 @@
-form {
+.contact-form {
   float: left;
-  background: olivedrab;
+  background: lightblue;
   display: flex;
   flex-direction: column;
   margin: 5rem 5%;
   padding: 2rem 4rem;
   width: 100%;
   max-width: 50rem;
+  max-height: 35rem;
   border-radius: 1rem;
 }
 
-form h3 {
+.contact-container h3 {
   text-align: center;
-  color: orange;
+  color: navy;
   font-size: 2.5rem;
   font-weight: 750;
   margin-bottom: 0.5rem;
@@ -20,20 +21,20 @@ form h3 {
 
 form input,
 form textarea {
-  color: orange;
+  color: black;
   border: 0;
-  margin: 0.5rem;
+  margin: .65rem;
   padding: 1rem;
   outline: none;
-  background: whitesmoke;
-  font-size: 16px;
+  background: white;
+  font-size: 20px;
   border-radius: 0.5rem;
 }
 
-form button {
+.contact-button {
   padding: 1rem;
-  background: orange;
-  color: white;
+  background: navy;
+  color: #ffff66;
   font-size: 18px;
   border: 0;
   outline: none;
@@ -43,9 +44,11 @@ form button {
   border-radius: 0.5rem;
 }
 
-form button:hover {
-  background: tan;
-  color: white;
+button:hover {
+  background: red;
+  color: #ffff66;
+  transition: background-color 0.25s ease-in-out;
+
 }
 
 .validation-message {
@@ -53,18 +56,25 @@ form button:hover {
   font-size: 14px;
   margin: 0.5rem;
 }
-.btn {
-  padding: 1rem;
-  background: orange;
-  color: white;
-  font-size: 18px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  width: 100%;
-  margin: 0.5rem 0;
-  border-radius: 0.5rem;
+
+.donate-card {
+  max-height: 35rem;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  padding: 2rem 4rem;
+  width: 30%;
+  border-radius: 1rem;
+  align-items: center;
 }
+
+.donate-image {
+  margin: 1rem;
+  width: 60%;
+  border-radius: 1rem;
+}
+
 
 /* Media Queries for Mobile */
 @media only screen and (max-width: 768px) {
