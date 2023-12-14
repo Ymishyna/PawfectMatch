@@ -18,7 +18,8 @@ const pets = [
   {
     name: "MeowMeowFuzzyFace",
     image:
-      "https://lh6.googleusercontent.com/proxy/vRaecxcZhidxRU85sVE-DI4OIwpEE723HEvyhZ8BSxWeqjj_QIOKqPT8Y_P8LhAFXn-srvAGtJxrz6OT0aJU1R4XypC-4bQSB95bBLC9-0NqB-d7YO6UX1Ync6NOyNacTMDwON7EIkg4Cq-iHkopM_o=s0-d",
+      // "https://lh6.googleusercontent.com/proxy/vRaecxcZhidxRU85sVE-DI4OIwpEE723HEvyhZ8BSxWeqjj_QIOKqPT8Y_P8LhAFXn-srvAGtJxrz6OT0aJU1R4XypC-4bQSB95bBLC9-0NqB-d7YO6UX1Ync6NOyNacTMDwON7EIkg4Cq-iHkopM_o=s0-d",
+      "https://i.pinimg.com/474x/39/87/9d/39879dab48c92c8704098360d3aa5060.jpg",
     bio: "MeowMewoFuzzyFace is a lovable kitten",
     breed: "Calico",
     age: "2 months",
