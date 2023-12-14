@@ -20,7 +20,7 @@ export const About = () => {
           in guiding and rehabilitating animals, they work tirelessly to make a
           positive impact on the lives of our furry friends. Their commitment
           reflects a shared goal of providing a loving and secure home for every
-          cat and dog, regardless of their background or circumstance.""
+          cat and dog, regardless of their background or circumstance."
         </p>
       </div>
       <div className="profile-cards" style={{margin: "2rem"}}>
