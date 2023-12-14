@@ -23,7 +23,7 @@ export const About = () => {
           cat and dog, regardless of their background or circumstance."
         </p>
       </div>
-      <div className="profile-cards" style={{margin: "2rem"}}>
+      <div className="profile-cards" style={{margin: "0rem 15rem 0rem 15rem"}}>
         {/* Use ProfileCard with different profileIndex values to display different profiles */}
         <ProfileCard profileIndex={0} />
         <ProfileCard profileIndex={1} />
