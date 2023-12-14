@@ -1,0 +1,49 @@
+## Pawfect Match
+
+https://github.com/Ymishyna/PawfectMatch.git
+
+https://nameless-beyond-62501-786f112efe52.herokuapp.com/
+
+## Description
+Pawfect Match is an easy to use pet adoption application. As of right now we have Dogs and Cats, but with more time we would like to add a variety of other pets as well. In this application you can use our search bar to help narrow down your choices. We have several catagories you can choose from including: Species, Gender, and Age. However we have a more complex system availble to help you choose your new friend. With catagories such as: sterilized, declawed, and if the friend you are choosing is housetrained yet.  Our app is deployed on Heroku. 
+
+## Table of Contents
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits](#credits)
+-[Contributing](#contributing)
+-[License](#license)
+
+## Installation
+This application has all the packages already installed. Once you have navigated to your command line and are in the correct folder for Pawfect Match, you simply run the command npm run dev. From there the app should kick off and our home page will load. There you will be greeted by a few smiling faces of adorable animals. 
+
+## Usage
+Once you have the application open, you are directed to our home page with our amazing logo that Marcus Matthews created. If you scroll down just at little you will see 3 adorable animals. Once you hover over those a small bio, age and Name of the animal will display. You are then directed to select from our form a dog or cat, then choose the age range: under 5 yrs old or over 5, from there you can choose a male or female animal. Once you click search you will be directed to another page with a match of the animals available. You can either sign in before or after this step. Once signed it you can save the animals you are interested in while you continue to look through our directory. Once you have made your decision you can adopt your new best friend!!
+
+![Alt text](image.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](src/assets/Logo.png)
+
+The technologies we use for this app include:
+React, Bootstrap, Express, Mongo, Vite, Nodemon, Concurrently, and React flip-card.
+
+## Credits
+This application would not have been made possible without the hard work of this amazing team. 
+-Yana Mishyna
+-Daniel Polk
+-Tom Fusco
+-Marcus Matthews
+-Sara Garcia
+
+## Contributing 
+
+Our amazing TA's assisted us throughout this process. A huge shout out to Sandra Smith, Cody Chase, Seth Wooten and Ali Rahimlou! Thank you all so much!!!
+
+## License
+Please see the github attached to this readme for more information regarding license.

@@ -1,23 +1,68 @@
 import React, { useState } from "react";
 import "./Home.css";
+import ReactCardFlip from "react-card-flip";
+import { savedPets } from "./savedPets";
+
+const pets = [
+  {
+    name: "Astro",
+    image:
+      "https://th.bing.com/th/id/R.be2739bdbf12662f392535182938cbab?rik=YKD9aOCvaaq7SA&riu=http%3a%2f%2ffallinpets.com%2fwp-content%2fuploads%2f2016%2f12%2fBoxer-puppy.jpg&ehk=dKGgrkgYxM754jHdkFdVLwRLb14TkJefLrXc8xv%2b4kU%3d&risl=&pid=ImgRaw&r=0",
+    bio: "Astro loves to be outside",
+    breed: "Boxer",
+    age: "4 months",
+    gender: "Male",
+    location:
+      "Orange County Animal Services, 2769 Conroy Rd, Orlando, FL 32839",
+  },
+  {
+    name: "MeowMeowFuzzyFace",
+    image:
+      // "https://lh6.googleusercontent.com/proxy/vRaecxcZhidxRU85sVE-DI4OIwpEE723HEvyhZ8BSxWeqjj_QIOKqPT8Y_P8LhAFXn-srvAGtJxrz6OT0aJU1R4XypC-4bQSB95bBLC9-0NqB-d7YO6UX1Ync6NOyNacTMDwON7EIkg4Cq-iHkopM_o=s0-d",
+      "https://i.pinimg.com/474x/39/87/9d/39879dab48c92c8704098360d3aa5060.jpg",
+    bio: "MeowMewoFuzzyFace is a lovable kitten",
+    breed: "Calico",
+    age: "2 months",
+    gender: "Female",
+    location: "777 W Central Blvd, Orlando, FL 32805",
+  },
+  {
+    name: "Bobby",
+    image:
+      "https://talktodogs.com/wp-content/uploads/2020/12/Labrador-Puppy-Golden-683x1024.jpg",
+    bio: "Astro loves to be outside",
+    breed: "Labrador",
+    age: "5 months",
+    gender: "Male",
+    location:
+      "Orange County Animal Services, 2769 Conroy Rd, Orlando, FL 32839",
+  },
+];
 
 export const Home = () => {
-  // State for search values and errors
   const [searchValue1, setSearchValue1] = useState("");
   const [searchValue2, setSearchValue2] = useState("");
   const [searchValue3, setSearchValue3] = useState("");
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [error3, setError3] = useState("");
+  const [flipped, setFlipped] = useState([]);
 
-  // Handler for search submit
+  const flipOnHover = (index, value) => {
+    return () => {
+      setFlipped((prev) => {
+        const next = Array.from(prev);
+        next[index] = value;
+        return next;
+      });
+    };
+  };
+
   const handleSearchSubmit = () => {
-    // Reset errors
     setError1("");
     setError2("");
     setError3("");
 
-    // Validate search values
     if (searchValue1 === "") {
       setError1("Please select a dog or cat");
     }
@@ -30,7 +75,6 @@ export const Home = () => {
       setError3("Please select animal's sex");
     }
 
-    // If no errors, proceed with search logic
     if (!error1 && !error2 && !error3) {
       console.log(
         "Search submitted:",
@@ -85,8 +129,27 @@ export const Home = () => {
           Search
         </button>
       </div>
-      <div className="logo">
-        <img src="./src/assets/Logo.png" alt="Logo" />
+
+      <div className="card-container">
+        {pets.map((pet, i) => (
+          <div className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
+            <ReactCardFlip isFlipped={flipped[i]} flipDirection="horizontal">
+              <div onMouseEnter={flipOnHover(i, true)}>
+                <div>{pet.name}</div>
+                <img src={pet.image} alt={pet.name} />
+              </div>
+              <div className="back-of-card">
+                <p>{pet.bio}</p>
+                <ul>
+                  <li>{pet.age}</li>
+                  <li>{pet.breed}</li>
+                  <li>{pet.gender}</li>
+                  <li>{pet.location}</li>
+                </ul>
+              </div>
+            </ReactCardFlip>
+          </div>
+        ))}
       </div>
       <div className="flip-card">
         <div className="container">

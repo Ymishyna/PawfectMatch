@@ -9,8 +9,12 @@ export const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="title">
+        <div className="logo">
+          <img src="./src/assets/Logo.png" alt="Logo" />
+        </div>
         PAWfect Match
       </Link>
+
       <div
         className="menu"
         onClick={() => {
@@ -29,9 +33,7 @@ export const Navbar = () => {
           <NavLink to="/contact">Contact/Donate</NavLink>
         </li>
         <li>
-
           <NavLink to="/login">Login</NavLink>
-
         </li>
       </ul>
     </nav>

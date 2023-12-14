@@ -1,6 +1,6 @@
 .active {
-  background-color: orange;
-  color: white;
+  background-color: red;
+  color: #FFFF66;
 }
 
 nav {
@@ -9,20 +9,26 @@ nav {
   align-items: center;
   margin-top: auto;
   padding: 0;
-  background-color: olivedrab;
+  background-color: lightblue;
   position: sticky;
-  width: 100%;
-  top: 0px;
+  top: 0;
+  border-bottom: .5rem solid navy;
 }
 
-nav .title {
-  font-size: 2.5rem;
-  margin: 1rem;
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 3.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: orange;
+  color: navy;
 }
 
+.logo img {
+  width: 110px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 1rem 2rem 0rem 2rem;
+}
 
 nav ul {
   display: flex;
@@ -37,58 +43,56 @@ nav ul li a {
   font-size: 1.25rem;
   display: block;
   text-decoration: none;
-  color: white;
+  color: navy;
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
 
 nav ul li a:not(.active):hover {
-  background-color: tan;
-  color: white;
+  background-color: #FFFF66;
+  color: navy;
 }
 
-nav .menu {
+.menu {
   display: none;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 2rem;
+  cursor: pointer;
 }
 
-nav .menu span {
-  width: 100%;
+.menu span {
+  width: 2.25rem;
   height: 0.4rem;
-  background-color: white;
+  background-color: navy;
   border-radius: 0.25rem;
+  margin: 0.25rem;
+  display: block;
 }
 
 @media (max-width: 638px) {
-  nav .menu {
+  .menu {
     display: flex;
-  }
-  nav {
     flex-direction: column;
-    align-items: stretch; /* Align items to stretch across the width */
+    align-items: flex-end;
   }
-  nav ul.open {
-    display: flex;
-    width: 100%; /* Make the navigation list take full width */
-  }
-  nav ul {
+
+  ul {
     display: none;
     flex-direction: column;
     width: 100%;
     margin: 0.25rem;
+    position: absolute;
+    top: 4rem; /* Adjust the top position as needed */
+    left: 0;
+    background-color: lightblue;
   }
-  nav ul li {
+
+  ul.open {
+    display: flex;
+  }
+
+  ul li {
     width: 100%;
     text-align: center;
-  }
-  nav ul li a {
-    margin: 0.2rem 0.5rem;
+    margin: 0.5rem 0;
   }
 }
