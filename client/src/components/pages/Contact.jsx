@@ -35,7 +35,7 @@ export const Contact = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space between",
-      }}
+      }} className="contact-container"
     >
       <form className="contact-form" onSubmit={handleFormSubmit}>
         <h3>Contact Us</h3>
@@ -64,7 +64,7 @@ export const Contact = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit">Submit</button>
+        <button className="contact-button" type="submit">Submit</button>
       </form>
 
         <div className="donate-card">
@@ -79,7 +79,7 @@ export const Contact = () => {
           <a
             href="https://buy.stripe.com/test_bIY00k20Ve0e1AQbII"
           style={{width: "100%"}}>
-            <button>Donate Today</button>
+            <button className="contact-button">Donate Today</button>
           </a>
         </div>
     </div>

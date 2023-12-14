@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
 .contact-form {
   float: left;
   background: lightblue;
@@ -18,7 +11,7 @@
   border-radius: 1rem;
 }
 
-h3 {
+.contact-container h3 {
   text-align: center;
   color: navy;
   font-size: 2.5rem;
@@ -38,7 +31,7 @@ form textarea {
   border-radius: 0.5rem;
 }
 
-button {
+.contact-button {
   padding: 1rem;
   background: navy;
   color: #ffff66;
