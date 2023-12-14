@@ -21,11 +21,6 @@
   box-shadow: 0px 5px 10px 0px navy;
 }
 
-.card-body:hover {
-  background-color: red;
-  transition: background-color 0.25s ease-in-out;
-}
-
 .profilePic {
   margin: 0rem;
   border: 0.5rem solid navy;
@@ -42,8 +37,14 @@
 }
 
 .githubLogo {
-  margin: 0rem;
+  padding: .25rem;
   width: auto;
   height: 50px;
   cursor: pointer;
+}
+
+.githubLogo:hover {
+  background-color: red;
+  transition: background-color 0.25s ease-in-out;
+  border-radius: 5rem;
 }
