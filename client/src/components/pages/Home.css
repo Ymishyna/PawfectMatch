@@ -41,12 +41,12 @@ select {
 }
 
 .searchButton {
+  margin: 1.5rem 0rem 0rem 2rem;
   width: 40%;
   height: 2.5rem;
   align-self: center;
   background-color: navy;
   color: #ffff66;
-  margin: .5rem;
   border: none;
   border-radius: 5rem;
   font-size: 1.5em;
