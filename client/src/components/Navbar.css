@@ -25,8 +25,8 @@ nav {
 }
 
 .logo img {
-  width: 110px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 110px;
+  height: auto;
   margin: 1rem 2rem 0rem 2rem;
 }
 
@@ -81,7 +81,7 @@ nav ul li a:not(.active):hover {
     width: 100%;
     margin: 0.25rem;
     position: absolute;
-    top: 4rem; /* Adjust the top position as needed */
+    top: 4rem;
     left: 0;
     background-color: lightblue;
   }

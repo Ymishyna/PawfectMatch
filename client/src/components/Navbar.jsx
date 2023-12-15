@@ -10,7 +10,10 @@ export const Navbar = () => {
     <nav>
       <Link to="/" className="title">
         <div className="logo">
-          <img src="./src/assets/Logo.png" alt="Logo" />
+          <img
+            src="https://drive.google.com/uc?export=view&id=1TqnFl9MxptCc16USgJgWnV7p7RgHbLZI"
+            alt="Logo"
+          />
         </div>
         PAWfect Match
       </Link>

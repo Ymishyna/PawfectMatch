@@ -132,26 +132,36 @@ export const Home = () => {
 
       <div className="card-container">
         {pets.map((pet, i) => (
-          <div className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
+          <div style={{backgroundColor: "lightblue", borderRadius: "5rem" }} className="card" onMouseLeave={flipOnHover(i, false)} key={i}>
             <ReactCardFlip isFlipped={flipped[i]} flipDirection="horizontal">
-              <div onMouseEnter={flipOnHover(i, true)}>
-                <div>{pet.name}</div>
-                <img src={pet.image} alt={pet.name} />
+              <div style={{height: "27rem"}} onMouseEnter={flipOnHover(i, true)}>
+                <div style={{color: "navy", fontSize: "1.25rem", padding: "1rem"}}>{pet.name}</div>
+                <img style={{ maxHeight: "20rem", maxWidth: "15rem", borderRadius: "2rem", border: ".5rem solid navy"}} src={pet.image} alt={pet.name} />
               </div>
-              <div className="back-of-card">
+              <div style={{backgroundColor: "lightblue", color: "navy", borderRadius: "5rem"}} className="back-of-card">
                 <p>{pet.bio}</p>
-                <ul>
+                <ul style={{listStyle: "none"}}>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                   <li>{pet.age}</li>
                   <li>{pet.breed}</li>
                   <li>{pet.gender}</li>
                   <li>{pet.location}</li>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                 </ul>
               </div>
             </ReactCardFlip>
           </div>
         ))}
       </div>
-      <div className="flip-card">
+      {/* <div className="flip-card">
         <div className="container">
           <div className="card">
             <div className="front"></div>
@@ -161,7 +171,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
