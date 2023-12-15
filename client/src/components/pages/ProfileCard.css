@@ -47,5 +47,4 @@
   background-color: red;
   transition: background-color 0.25s ease-in-out;
   border-radius: 5rem;
-  filter: invert(100%);
 }
