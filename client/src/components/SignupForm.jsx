@@ -114,7 +114,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Are you a pet Vendor?</Form.Label>
+          <Form.Label style={{color: "navy"}}>Are you a pet Vendor?</Form.Label>
           <Form.Control
             as="select"
             name="isVendor"
@@ -132,7 +132,16 @@ const SignupForm = () => {
 
        
 
-        <Button
+        <Button style={{  padding: "1rem",
+  background: "navy",
+  color: "#ffff66",
+  fontSize: "18px",
+  border: "0",
+  outline: "none",
+  cursor: 'pointer',
+  width: "50%",
+  margin: "0.5rem 0",
+  borderRadius: "0.5rem"}}
           disabled={
             loading ||
             !(
