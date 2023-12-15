@@ -141,10 +141,20 @@ export const Home = () => {
               <div style={{backgroundColor: "lightblue", color: "navy", borderRadius: "5rem"}} className="back-of-card">
                 <p>{pet.bio}</p>
                 <ul style={{listStyle: "none"}}>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                   <li>{pet.age}</li>
                   <li>{pet.breed}</li>
                   <li>{pet.gender}</li>
                   <li>{pet.location}</li>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                 </ul>
               </div>
             </ReactCardFlip>
