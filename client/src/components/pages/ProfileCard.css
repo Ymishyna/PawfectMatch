@@ -1,11 +1,11 @@
-.profile-card {
+.card {
   width: 22rem;
   margin: 1rem;
   text-align: center;
   background-color: none;
 }
 
-.profile-name {
+.card h1 {
   margin: 1.25rem 0rem 1rem;
   color: black;
   font-size: 24px;
@@ -47,4 +47,5 @@
   background-color: red;
   transition: background-color 0.25s ease-in-out;
   border-radius: 5rem;
+  filter: invert(100%);
 }
