@@ -1,11 +1,11 @@
-.card {
+.profile-card {
   width: 22rem;
   margin: 1rem;
   text-align: center;
   background-color: none;
 }
 
-.card h1 {
+.profile-name {
   margin: 1.25rem 0rem 1rem;
   color: black;
   font-size: 24px;
