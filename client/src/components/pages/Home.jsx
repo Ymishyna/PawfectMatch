@@ -151,7 +151,7 @@ export const Home = () => {
           </div>
         ))}
       </div>
-      <div className="flip-card">
+      {/* <div className="flip-card">
         <div className="container">
           <div className="card">
             <div className="front"></div>
@@ -161,7 +161,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
